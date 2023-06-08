@@ -9,7 +9,7 @@ import secondImageInfo from '../../assets/images/info2.svg';
 const WelcomePage: FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
 
   return (
     <div className={classes.welcome}>

@@ -92,14 +92,13 @@ const PaymentPage: FC = () => {
   }, []);
 
   const handleSubmitButton = async (data: any) => {
-    const serverData = { customer: data.email, amount: data.budget };
-    console.log('Submit');
+    const budget = data.budget + '.99';
+    const serverData = { customer: data.email, amount: budget };
+
     await axios
       .post('http://3.121.51.155:5000/api/checkout', serverData)
       .then((data) => window.location.replace(data.data))
       .catch((error) => console.log(error));
-
-    // window.location.replace('https://www.google.com/')
   };
 
   useEffect(() => {
