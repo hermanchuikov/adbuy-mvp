@@ -1,0 +1,77 @@
+.payment {
+  background-color: #fcfcfc;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.paymentBlock {
+  padding: 75px 0;
+}
+
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+}
+
+.selectBlock {
+  width: 29%;
+}
+
+.inputBlock {
+  width: 69%;
+}
+
+.phoneNumberTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.blockInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dateInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dateTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.datePicker {
+  border-radius: 18px;
+}
+
+.errorBlock {
+  position: relative;
+}
+
+.dateError {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #e71e1e;
+}
+
+.maskInput {
+  border: 1px solid #d9d9d9;
+  border-radius: 18px;
+  padding-left: 20px;
+  font-size: 22px;
+  width: 100%;
+  height: 50px;
+}
+

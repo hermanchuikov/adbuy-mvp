@@ -1,0 +1,14 @@
+.radioBlock {
+    display: flex;
+    align-items: center;
+}
+
+.radio {
+    margin-right: 16px;
+}
+
+.radioText {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}

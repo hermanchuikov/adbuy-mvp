@@ -1,0 +1,15 @@
+.header {
+  width: '100%';
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/images/Frame\ 65.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  width: 196px;
+  height: 70px;
+}

@@ -1,0 +1,60 @@
+.ad {
+  padding: 80px 0 96px 0;
+  background-color: #fcfcfc;
+  /* background-image: url('../../assets/images/Frame\ 65.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  height: 100%;
+}
+
+.adHeader {
+  margin: 0 auto;
+
+  /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.adHeaderBlock {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 96px;
+}
+
+.adHeaderBlockInner {
+  display: flex;
+  align-items: center;
+}
+
+.adHeaderImage {
+  width: 100px;
+  height: 100px;
+}
+
+.adHeaderPlatform {
+  font-size: 36px;
+  font-weight: 700;
+  margin-left: 36px;
+}
+
+.adHeaderTitle {
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 24px;
+}
+
+.adBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 32px;
+  margin: 0 auto;
+}

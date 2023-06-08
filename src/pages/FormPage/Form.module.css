@@ -1,0 +1,72 @@
+.formPage {
+  padding-top: 75px;
+  background-color: #fcfcfc;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+}
+
+.formInner {
+  margin-top: 64px;
+}
+
+.selectBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.select {
+    width: 42%;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageErrorBlock {
+  position: relative;
+}
+
+.imageError {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #e71e1e;
+}
+
+.imageTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.loaderText {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+}

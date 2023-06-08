@@ -1,0 +1,121 @@
+.welcome {
+  background-color: #fcfcfc;
+}
+
+.header {
+  background-image: url('../../assets/images/Frame\ 65.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.nav {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerInfo {
+  width: 480px;
+}
+
+.headerTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.headerButton {
+  background-color: #479be9;
+  color: #fff;
+  width: 270px;
+  height: 60px;
+  border-radius: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerButtonText {
+  padding: 7px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-left: 12px;
+}
+
+.info {
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+}
+
+.infoBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.infoBlock:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.infoBlockImage {
+  width: 45%;
+}
+
+.infoBlockInner {
+  width: 45%;
+}
+
+.infoBlockTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px; 
+}
+
+.infoBlockText {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.infoBlockButton {
+  background-color: #479be9;
+  color: #fff;
+  width: 240px;
+  height: 55px;
+  border-radius: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

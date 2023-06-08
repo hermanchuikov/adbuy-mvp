@@ -1,0 +1,592 @@
+.facebookWrapper {
+
+}
+
+.facebookBlock {
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  width: 500px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.facebookHeader {
+  padding: 12px 16px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.facebookHeaderBlock {
+  display: flex;
+  align-items: center;
+}
+
+.facebookLogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+
+.facebookHeaderTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #282828;
+}
+
+.facebookHeaderSubtititle {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.facebookHeaderButton {
+  display: flex;
+  column-gap: 2px;
+  padding: 8px;
+}
+
+.facebookHeaderButtonDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #65676b;
+}
+
+.facebookAdTitle {
+  padding: 4px 16px 16px 16px;
+  color: #050505;
+  font-size: 15px;
+  font-weight: 400;
+  word-break: break-word;
+  line-height: 19px;
+}
+
+.facebookImageBLock {
+  width: 500px;
+  height: 260px;
+}
+
+.facebookImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-1px);
+}
+
+.facebookInfoInner {
+  background-color: #f0f2f5;
+  padding: 12px 16px;
+  border-bottom: 1px solid #dddfe2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facebookInfoBlock {
+  overflow: hidden;
+  width: 75%;
+}
+
+.facebookInfoUrl {
+  color: #65676b;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.facebookInfoTitle {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.facebookInfoSubtitle {
+  display: block;
+  color: #65676b;
+  font-size: 15px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.facebookInfoButtonBlock {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.facebookInfoButton {
+  padding: 0 12px;
+  background-color: #e4e6eb;
+  border-radius: 6px;
+  border: none;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #050505;
+}
+
+.facebookButtonInner {
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faceBookButtonBlock {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 32px;
+}
+
+.facebookButtonBlockText {
+  font-weight: 700;
+  color: #616770;
+  font-size: 13px;
+}
+
+
+.instagramWrapper {
+  transform: scale(0.9);
+}
+
+.instagramBlock {
+  
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 8px;
+  width: 470px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.instagramHeader {
+  padding: 8px 12px;
+}
+
+.instagramHeaderInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagramHeaderBlock {
+  display: flex;
+  /* max-width: 85%; */
+  align-items: center;
+}
+
+.instagramHeaderLogo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.instagramHeaderInfo {
+  margin-left: 10px;
+}
+
+.instagramHeaderTitle {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: rgb(38, 38, 38);
+}
+
+.instagramHeaderSubtitle {
+  color: #282828;
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.instagramHeaderButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.instagramHeaderButtonDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #282828;
+}
+
+.instagramImageBlock {
+  width: 470px;
+  height: 245px;
+}
+
+.instagramImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  transform: translateX(-1px);
+}
+
+.instagramGoalBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9eaeb;
+  padding: 10px 10px 8px 10px;
+}
+
+.instagramGoalTitle {
+  color: #282828;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.instagramGoalIcon {
+  color: #282828;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.instagramInfoInner {
+  padding: 4px 16px 16px 16px;
+}
+
+.instagramInfoButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.instagramLikeButtonBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.instagramSaveButton {
+}
+
+.instagramInfoBlock {
+}
+
+.instagramViews {
+  font-weight: 700;
+  font-size: 14px;
+  color: #282828;
+}
+
+.instagramInfo {
+}
+
+.instagramUsername {
+  font-size: 14px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.instagramComments {
+  color: #666;
+  margin-top: 8px;
+}
+
+.googleBlock {
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  width: 650px;
+  cursor: pointer;
+}
+
+.googleSupTitleBlock {
+  display: flex;
+  column-gap: 12px;
+}
+
+.googleSupTitleAd {
+  font-weight: 700;
+  font-size: 14px;
+  color: #202124;
+  font-family: 'Roboto', sans-serif;
+}
+
+.googleSupTitle {
+  font-size: 14px;
+  color: #202124;
+  font-family: 'Roboto', sans-serif;
+}
+
+.googleTitleBlock {
+  column-gap: 7px;
+}
+
+.googleTitle {
+  color: #1a0dab;
+  font-size: 20px;
+  line-height: 26px;
+  word-break: break-word;
+  margin: 3px 0;
+  font-family: 'Roboto', sans-serif;
+  display: inline;
+}
+
+.googleDescriptionText {
+  color: #4d5156;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  background-color: #000;
+}
+
+.pauseBlock {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(15, 15, 15, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.pauseBlockItem {
+  background-color: rgba(240, 240, 240, 0.9);
+  height: 70px;
+  width: 10px;
+  border-radius: 8px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tiktokBlock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.tiktokVideo {
+  width: 375px;
+  height: 667px;
+}
+
+.tiktokHeader {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+  margin-top: 10px;
+}
+
+.tiktokHeaderTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tiktokInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.tiktokButtonsBlock {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tiktokButtons {
+  z-index: 999;
+}
+
+.tiktokLogoBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tiktokLogoImage {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+
+.tiktokLogoButton {
+  width: 24px;
+  justify-self: 24px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fe2c55;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.tiktokLogoButtonText {
+  color: #fff;
+}
+
+.tiktokButtonBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  margin-bottom: 16px;
+  /* z-index: 999; */
+}
+
+.tiktokLikeButton {
+  width: 40px;
+  height: 33px;
+}
+
+.tiktokCommentIcon {
+  width: 40px;
+  height: 33px;
+}
+
+.tiktokShareIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.tiktokButtonIcon {
+  color: #fff;
+}
+
+.tiktokButtonText {
+  font-size: 13px;
+  color: #fff;
+}
+
+.tiktokFooter {
+  display: flex;
+  justify-content: space-between;
+  backface-visibility: hidden;
+}
+
+.tiktokFooterBlock {
+  width: 80%;
+}
+
+.tiktokUsername {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.tiktokTags {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.tiktokMusic {
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.tiktokDisc {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #282828;
+  /* transform: translateX(-6px); */
+  transform: rotate(360deg);
+  animation: infinite all 1s;
+}
+
+.chooseBlock {
+  display: flex;
+  justify-content: center;
+}
+
+.chooseButton {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 12px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+
+.adchooseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+/* .adchooseButton:active {
+  border: 3px solid #33d684;
+} */
+
+.adchooseCircle {
+  opacity: 0;
+  background-color: #000;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.adchooseButton:active .adchooseCircle {
+  opacity: 1;
+  background-color: #33d684;
+}
+
