@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import classes from './CustomSelect.module.css';
 import Select from 'react-select';
 import { Controller } from 'react-hook-form';
+import { useMediaQuery } from 'react-responsive';
 
 interface ISelectProps {
   name: string;
@@ -39,6 +40,10 @@ const CustomSelect: FC<ISelectProps> = ({
   //   </>
   // );
 
+  const isMobile = useMediaQuery({
+    query: '(max-width: 440px)',
+  });
+
   return (
     <div className={classes.select} style={style}>
       {label && <h4 className={classes.selectTitle}>{label}</h4>}
@@ -48,11 +53,15 @@ const CustomSelect: FC<ISelectProps> = ({
         rules={rules}
         render={({ field }) => (
           <Select
-            styles={{
+            styles={isMobile ? {control: (baseStyles, state) => ({
+              ...baseStyles,
+              height: '40px',
+              borderRadius: '7px'
+            })} : {
               control: (baseStyles, state) => ({
                 ...baseStyles,
-                minHeight: '50px',
-                // height: '50px',
+                // minHeight: '50px',
+                height: '50px',
                 borderRadius: '18px'
               }),
             }}

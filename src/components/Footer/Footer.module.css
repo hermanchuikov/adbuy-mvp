@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    padding: 50px 0;
+    padding: 48px 0 16px 0;
 }
 
 .container {
@@ -13,4 +13,26 @@
 
 .footerText {
     font-size: 22px;
+}
+
+.footerLink {
+    color: #479BE9;
+    font-size: 22px;
+}
+
+@media (max-width: 440px) {
+    .footer {
+        padding: 36px 0 8px 0;
+    }
+    .container {
+        width: 100%;
+        padding: 0 8px;
+        flex-direction: column;
+    }
+    .footerText {
+        font-size: 16px;
+    }
+    .footerLink {
+        font-size: 16px;
+    }
 }

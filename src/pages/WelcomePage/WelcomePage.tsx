@@ -1,12 +1,18 @@
 import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import classes from './Welcome.module.css';
 import logo from '../../assets/images/Logo.svg';
 import headerImage from '../../assets/images/HeaderImage.svg';
 import firstImageInfo from '../../assets/images/info1 (2).svg';
 import secondImageInfo from '../../assets/images/info2.svg';
+import { Footer } from '../../components';
 
 const WelcomePage: FC = () => {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 440px)',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,17 +25,33 @@ const WelcomePage: FC = () => {
         </div>
         <div className={classes.container}>
           <div className={classes.headerBlock}>
-            <div className={classes.headerInfo}>
-              <h2 className={classes.headerTitle}>
-                Run effective ads on Google, Facebook, Instagram and TikTok in 3
-                minutes
-              </h2>
-              <Link to={'platforms'} className={classes.headerButton}>
-                try for
-                <span className={classes.headerButtonText}> 0,99 USD</span>
-              </Link>
-            </div>
-            <img className={classes.headerImage} src={headerImage} />
+            {isMobile ? (
+              <>
+                <h2 className={classes.headerTitle}>
+                  Run effective ads on Google, Facebook, Instagram and TikTok in
+                  3 minutes
+                </h2>
+                <img className={classes.headerImage} src={headerImage} />
+                <Link to={'platforms'} className={classes.headerButton}>
+                  try for
+                  <span className={classes.headerButtonText}> 0,99 USD</span>
+                </Link>
+              </>
+            ) : (
+              <>
+                <div className={classes.headerInfo}>
+                  <h2 className={classes.headerTitle}>
+                    Run effective ads on Google, Facebook, Instagram and TikTok
+                    in 3 minutes
+                  </h2>
+                  <Link to={'platforms'} className={classes.headerButton}>
+                    try for
+                    <span className={classes.headerButtonText}> 0,99 USD</span>
+                  </Link>
+                </div>
+                <img className={classes.headerImage} src={headerImage} />
+              </>
+            )}
           </div>
         </div>
       </header>
@@ -63,6 +85,7 @@ const WelcomePage: FC = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

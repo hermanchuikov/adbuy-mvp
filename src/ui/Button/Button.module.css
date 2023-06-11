@@ -11,4 +11,12 @@
   width: 100%;
   padding: 25px 0;
   color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 440px) {
+  .button {
+    padding: 7px 0;
+    font-size: 14px;
+  }
 }

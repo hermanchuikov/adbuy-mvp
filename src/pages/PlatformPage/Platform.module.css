@@ -16,7 +16,6 @@
 }
 
 .platformInner {
-  
 }
 
 .platformBlock {
@@ -69,4 +68,34 @@
 
 .errorContainer {
   position: relative;
+}
+
+@media (max-width: 440px) {
+  .platform {
+    padding-top: 36px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 24px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .platformInner {
+    width: 100%;
+  }
+  .platformBlock {
+    margin-top: 18px;
+    margin-bottom: 36px;
+  }
+  .checkboxImage {
+    width: 41px;
+    height: 41px;
+  }
+  .errorMessage {
+    top: 12px;
+    font-size: 14px;
+    text-align: center;
+  }
 }

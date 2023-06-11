@@ -72,7 +72,7 @@ const FormPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
 
   const [firstImageLink, setFirstImageLink] = useState('');
   const [secondImageLink, setSecondImageLink] = useState('');
@@ -96,9 +96,9 @@ const FormPage = () => {
   });
 
   const adGoalInput = useWatch({
-    control, 
-    name: 'adGoal'
-  })
+    control,
+    name: 'adGoal',
+  });
 
   // console.log(typeof countries)
   // console.log(typeof platformList)
@@ -106,9 +106,13 @@ const FormPage = () => {
   console.log(errors);
 
   useEffect(() => {
-    const requireImage = !(platforms.length === 1 && platforms[0] === 'google' && adGoalInput?.value === 'App promotion')
+    const requireImage = !(
+      platforms.length === 1 &&
+      platforms[0] === 'google' &&
+      adGoalInput?.value === 'App promotion'
+    );
     setRequireImage(requireImage);
-  }, [adGoalInput, platforms])
+  }, [adGoalInput, platforms]);
 
   const handleSubmitButton = async (data: any) => {
     const form = new FormData();
@@ -264,33 +268,6 @@ const FormPage = () => {
             onSubmit={handleSubmit(handleSubmitButton)}
             className={classes.form}
           >
-            {/* <Controller
-              name="gender"
-              control={control}
-              render={({ field }) => (
-                <RadioButtonGroup
-                  groupName="gender"
-                  valuesGroup={radioButton}
-                  onChange={field.onChange}
-                />
-              )}
-            /> */}
-
-            {/* <div>
-              <h4 className={classes.selectTitle}>Advertising goal</h4>
-              <Controller
-                name="adGoal"
-                control={control}
-                rules={{ required: 'Advertising goal should be filled' }}
-                render={({ field }) => (
-                  <Select
-                    options={adGoals}
-                    onChange={field.onChange}
-                    onBlur={field.onBlur}
-                  />
-                )}
-              />
-            </div> */}
             <CustomSelect
               control={control}
               label="Advertising goal"
@@ -324,45 +301,6 @@ const FormPage = () => {
                   isMulti
                 />
               </div>
-
-              {/* <div className={classes.select}>
-                <h4 className={classes.selectTitle}>Location</h4>
-                <Controller
-                  name="location"
-                  control={control}
-                  rules={{ required: 'Loacation should be filled' }}
-                  render={({ field }) => (
-                    <Select
-                      options={locationOptions}
-                      isMulti
-                      onChange={field.onChange}
-                      onBlur={field.onBlur}
-                    />
-                  )}
-                />
-                {errors?.email?.message && (
-                  <p className={classes.inputError}>
-                    {errors?.email?.message as any}
-                  </p>
-                )}
-              </div> */}
-
-              {/* <div className={classes.select}>
-                <h4 className={classes.selectTitle}>Language</h4>
-                <Controller
-                  name="language"
-                  control={control}
-                  rules={{ required: 'Language should be filled' }}
-                  render={({ field }) => (
-                    <Select
-                      options={languageOptions}
-                      isMulti
-                      onChange={field.onChange}
-                      onBlur={field.onBlur}
-                    />
-                  )}
-                />
-              </div> */}
             </div>
 
             <Input
@@ -371,7 +309,6 @@ const FormPage = () => {
               })}
               title="Headline"
               placeholder="AirPods Pro (2nd generation)"
-              inputStyles={{ width: '900px', height: '70px' }}
               error={errors?.adTitle?.message as any}
             />
             <Input
@@ -380,74 +317,71 @@ const FormPage = () => {
               })}
               title="Description"
               placeholder="Up to 2x more Active Noise Cancellation than the previous generation…"
-              inputStyles={{ width: '900px', height: '70px' }}
               error={errors?.adDescription?.message as any}
             />
             <Input
               {...register('adUrl', { required: 'Url is required' })}
               title="URL"
-              placeholder='apple.com/airpods-pro'
-              inputStyles={{ width: '900px', height: '70px' }}
+              placeholder="apple.com/airpods-pro"
               error={errors?.adDescription?.message as any}
             />
 
-            {/* Image picker */}
-
-            {requireImage && <div className={classes.imageInner}>
-              <h4 className={classes.imageTitle}>Images</h4>
-              <div className={classes.imageContainer}>
-                <div>
-                  <ImagePicker
-                    {...register('firstImage', {
-                      required: 'Image is required',
-                    })}
-                    name="firstImage"
-                    image={firstImageLink}
-                  />
-                  <div className={classes.imageErrorBlock}>
-                    <p className={classes.imageError}>
-                      {errors?.firstImage?.message as any}
-                    </p>
+            {requireImage && (
+              <div className={classes.imageInner}>
+                <h4 className={classes.imageTitle}>Images</h4>
+                <div className={classes.imageContainer}>
+                  <div>
+                    <ImagePicker
+                      {...register('firstImage', {
+                        required: 'Image is required',
+                      })}
+                      name="firstImage"
+                      image={firstImageLink}
+                    />
+                    <div className={classes.imageErrorBlock}>
+                      <p className={classes.imageError}>
+                        {errors?.firstImage?.message as any}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <ImagePicker
-                    {...register('secondImage', {
-                      required: 'Image is required',
-                    })}
-                    name="secondImage"
-                    image={secondImageLink}
-                  />
-                  <div className={classes.imageErrorBlock}>
-                    <p className={classes.imageError}>
-                      {errors?.secondImage?.message as any}
-                    </p>
+                  <div>
+                    <ImagePicker
+                      {...register('secondImage', {
+                        required: 'Image is required',
+                      })}
+                      name="secondImage"
+                      image={secondImageLink}
+                    />
+                    <div className={classes.imageErrorBlock}>
+                      <p className={classes.imageError}>
+                        {errors?.secondImage?.message as any}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <ImagePicker
-                    {...register('thirdImage', {
-                      required: 'Image is required',
-                    })}
-                    name="thirdImage"
-                    image={thirdImageLink}
-                  />
-                  <div className={classes.imageErrorBlock}>
-                    <p className={classes.imageError}>
-                      {errors?.thirdImage?.message as any}
-                    </p>
+                  <div>
+                    <ImagePicker
+                      {...register('thirdImage', {
+                        required: 'Image is required',
+                      })}
+                      name="thirdImage"
+                      image={thirdImageLink}
+                    />
+                    <div className={classes.imageErrorBlock}>
+                      <p className={classes.imageError}>
+                        {errors?.thirdImage?.message as any}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>}
+            )}
 
             <Button
               title="Generate ad"
               style={{
                 'background-color': '#33d684',
-                'font-size': '24px',
                 'font-weight': 700,
               }}
             />
@@ -459,40 +393,3 @@ const FormPage = () => {
 };
 
 export default FormPage;
-
-// return (
-//   <div className={classes.platform}>
-//     <div className={classes.container}>
-//       <h2 className={classes.title}>Select platforms</h2>
-//       <div className={classes.platformInner}>
-//         <form onSubmit={handleSubmit(handlePlatformButton)} className={classes.platformBlock}>
-//           {platformList.map((platform) => {
-//             return (
-//               <CheckBox
-//                 control={control}
-//                 name={platform.name}
-//                 key={platform.name}
-//               >
-//                 <img src={platform.image} style={{ cursor: 'pointer' }} />
-//               </CheckBox>
-//             );
-//           })}
-//         </form>
-//         {/* <div className={classes.errorContainer}>
-//           {error && <p className={classes.errorMessage}>{error}</p>}
-//         </div> */}
-//       </div>
-
-//       <Button
-//         onButtonClick={handlePlatformButton}
-//         title="Next page"
-//         style={{
-//           width: '900px',
-//           height: '80px',
-//           'background-color': '#33d684',
-//           'font-size': '24px',
-//         }}
-//       />
-//     </div>
-//   </div>
-// );

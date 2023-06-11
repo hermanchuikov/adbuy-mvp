@@ -26,6 +26,8 @@ input::-webkit-inner-spin-button {
   padding-left: 20px;
   font-size: 22px;
   width: 100%;
+  height: 70px;
+  padding-right: 8px;
 }
 
 .errorContainer {
@@ -39,4 +41,22 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   font-weight: 300;
   color: #e71e1e;
+}
+
+
+@media (max-width: 440px) {
+  .inputTitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .input {
+    font-size: 14px;
+    border-radius: 7px;
+    height: 40px;
+  }
+  .input::placeholder {
+    font-size: 14px;
+  }
+
 }

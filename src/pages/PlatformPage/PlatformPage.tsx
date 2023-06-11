@@ -4,6 +4,7 @@ import { Button, CheckBox, Loader } from '../../ui';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { useMediaQuery } from 'react-responsive';
 import { setCountriesandLanguages } from '../../store/slices/adSlice';
 import { setPlatforms } from '../../store/slices/adSlice';
 import classes from './Platform.module.css';
@@ -42,6 +43,10 @@ const PlatformPage: FC = () => {
     },
   });
 
+  const isMobile = useMediaQuery({
+    query: '(max-width: 440px)',
+  });
+
   const [loading, setLoading] = useState(false);
   const [responseError, setResponseError] = useState('');
   const navigate = useNavigate();
@@ -49,7 +54,7 @@ const PlatformPage: FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
 
   const handleSubmitButton = async (data: object) => {
     let chosenPlatforms = [];
@@ -95,7 +100,11 @@ const PlatformPage: FC = () => {
                       key={platform.name}
                       isChecked={platform.isActive}
                     >
-                      <img src={platform.image} style={{ cursor: 'pointer' }} />
+                      <img
+                        src={platform.image}
+                        style={{ cursor: 'pointer' }}
+                        className={classes.checkboxImage}
+                      />
                     </CheckBox>
                   );
                 })}
@@ -103,17 +112,28 @@ const PlatformPage: FC = () => {
 
               <Button
                 title="Next page"
-                style={{
-                  width: '900px',
-                  height: '80px',
-                  'background-color': '#33d684',
-                  'font-size': '24px',
-                }}
+                style={
+                  isMobile
+                    ? {
+                        height: '30px',
+                        'font-size': '14px',
+                        'background-color': '#33d684',
+                        'padding': 0,
+                      }
+                    : {
+                        height: '80px',
+                        'background-color': '#33d684',
+                        'font-size': '24px',
+                        'padding': 0,
+                      }
+                }
               />
             </form>
             <div className={classes.errorContainer}>
-            {responseError && <p className={classes.errorMessage}>{responseError}</p>}
-          </div>
+              {responseError && (
+                <p className={classes.errorMessage}>{responseError}</p>
+              )}
+            </div>
           </div>
         </div>
       </div>

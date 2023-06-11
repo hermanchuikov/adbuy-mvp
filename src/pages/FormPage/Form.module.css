@@ -70,3 +70,27 @@
   font-size: 22px;
   font-weight: 500;
 }
+
+
+@media (max-width: 440px) {
+  .formPage {
+    padding-top: 36px;
+  }
+  .container {
+    padding: 0 12px;
+    width: 100%;
+  }
+  .formTitle {
+    font-size: 24px;
+  }
+  .form {
+    row-gap: 24px;
+  }
+  .formInner {
+    margin-top: 36px;
+  }
+  .imageTitle {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+}
