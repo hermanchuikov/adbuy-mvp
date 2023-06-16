@@ -25,9 +25,9 @@
 }
 
 .selectBlock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .selectTitle {
@@ -37,7 +37,7 @@
 }
 
 .select {
-    width: 42%;
+  width: 42%;
 }
 
 .imageContainer {
@@ -71,7 +71,6 @@
   font-weight: 500;
 }
 
-
 @media (max-width: 440px) {
   .formPage {
     padding-top: 36px;
@@ -84,7 +83,7 @@
     font-size: 24px;
   }
   .form {
-    row-gap: 24px;
+    row-gap: 36px;
   }
   .formInner {
     margin-top: 36px;
@@ -92,5 +91,12 @@
   .imageTitle {
     font-size: 16px;
     margin-bottom: 4px;
+  }
+  .imageError {
+    top: 4px;
+    font-size: 12px;
+  }
+  .imageInner {
+    margin-bottom: 18px;
   }
 }

@@ -33,3 +33,23 @@
     text-align: center;
     margin-top: 4px;
 }
+
+@media (max-width: 440px) {
+    .congrats {
+        padding: 36px 0;
+        flex: 1;
+    }
+    .congratsBlock {
+        width: 100%;
+        padding: 0 12px;
+    }
+    .congratsTitle {
+        font-size: 24px;
+    }
+    .congratsText {
+        font-size: 18px;
+    }
+    .congratsSubtext {
+        font-size: 18px;
+    }
+}

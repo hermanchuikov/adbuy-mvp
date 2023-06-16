@@ -138,31 +138,11 @@ const FormPage = () => {
     form.append('photo_2', data.secondImage[0]);
     form.append('photo_3', data.thirdImage[0]);
 
-    // const adInfo = {
-    //   platforms: platforms,
-    //   goal: data.adGoal.value,
-    //   location: data.location.value,
-    //   language: data.language.value,
-    //   headline: data.adTitle,
-    //   description: data.adDescription,
-    //   url: data.adUrl,
-    //   photo_1: firstImageLink,
-    //   photo_2: secondImageLink,
-    //   photo_3: thirdImageLink,
-    // }
-
-    // console.log(platforms)
-    // console.log(data.adGoal.value)
-    // console.log(data.location)
-    // console.log(data.language)
-    // console.log(data.adTitle)
-    // console.log(data.adDescription)
-    // console.log(data.adUrl)
-    // console.log(firstImageLink)
+    console.log(form);
 
     setLoading(true);
     await axios
-      .post('http://3.121.51.155:5000/api/generate', form)
+      .post('http://3.121.51.155:5000/api/generate', form, {headers: {}})
       .then((data) => {
         let responseData = data.data.result;
         dispatch(setAdInfo(responseData));

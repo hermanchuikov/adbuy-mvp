@@ -130,6 +130,7 @@ const PaymentPage: FC = () => {
     <div className={classes.payment}>
       <div className={classes.container}>
         <div className={classes.paymentBlock}>
+          <h2 className={classes.paymentTitle}>A little bit more!</h2>
           <form
             onSubmit={handleSubmit(handleSubmitButton)}
             className={classes.paymentForm}
@@ -178,7 +179,6 @@ const PaymentPage: FC = () => {
                 },
               })}
               title="Email"
-              inputStyles={{ width: '900px', height: '70px' }}
               error={errors?.email?.message as any}
             />
 
@@ -213,6 +213,7 @@ const PaymentPage: FC = () => {
                         minDate={minDate}
                         disabled={startDateInput == null}
                         format="dd/MM/yyyy"
+                        className={classes.datePicker}
                       />
                     )}
                   />
@@ -235,7 +236,6 @@ const PaymentPage: FC = () => {
                 },
               })}
               title="Daily budget"
-              inputStyles={{ width: '900px', height: '70px' }}
               error={errors?.budget?.message as any}
               type="number"
               placeholder={`Minimum budget: ${minimumBudget}`}
@@ -243,10 +243,7 @@ const PaymentPage: FC = () => {
             <Button
               title="Pay and Run"
               style={{
-                width: '900px',
-                height: '80px',
                 'background-color': '#33d684',
-                'font-size': '24px',
               }}
             />
           </form>
