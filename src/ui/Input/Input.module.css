@@ -58,5 +58,10 @@ input::-webkit-inner-spin-button {
   .input::placeholder {
     font-size: 14px;
   }
-
+  .inputError {
+    top: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #e71e1e;
+  }
 }

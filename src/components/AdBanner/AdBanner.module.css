@@ -1,5 +1,20 @@
 .facebookWrapper {
+  transform: scale(0.6);
+  position: absolute;
+}
 
+.facebookWrapper:nth-child(1) {
+  top: 20px;
+  left: -40px;
+}
+
+.facebookWrapper:nth-child(2) {
+  top: 20px;
+}
+
+.facebookWrapper:nth-child(3) {
+  top: 20px;
+  right: -40px;
 }
 
 .facebookBlock {
@@ -155,7 +170,24 @@
 
 
 .instagramWrapper {
-  transform: scale(0.9);
+  transform: scale(0.7);
+  position: absolute;
+}
+
+
+
+.instagramWrapper:nth-child(1) {
+ top: 20px;
+ left: -30px;
+}
+
+.instagramWrapper:nth-child(2) {
+  top: 20px;
+}
+
+.instagramWrapper:nth-child(3) {
+  top: 20px;
+ right: -30px;
 }
 
 .instagramBlock {
@@ -353,6 +385,10 @@
   width: 375px;
   height: 667px;
   background-color: #000;
+}
+
+.tiktokWrapper:nth-child(2) {
+  margin: 0 20px; 
 }
 
 .pauseBlock {
@@ -590,3 +626,9 @@
   background-color: #33d684;
 }
 
+@media (max-width: 440px) {
+  .instagramWrapper {
+    position: static;
+    transform: scale(0.7);
+  }
+}

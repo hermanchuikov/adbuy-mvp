@@ -73,6 +73,7 @@
 @media (max-width: 440px) {
   .platform {
     padding-top: 36px;
+    flex: 1;
   }
   .container {
     width: 100%;

@@ -7,10 +7,11 @@ import facebookImage from '../../assets/images/platform-2.svg';
 import instagramImage from '../../assets/images/platform-3.svg';
 import tiktokImage from '../../assets/images/platform-4.svg';
 import classes from './AdPage.module.css';
+import { ads } from '../../assets/doomyData/ads';
 
 
 const AdPage: FC = () => {
-  const { ads } = useAppSelector((state) => state.ad);
+  // const { ads } = useAppSelector((state) => state.ad);
   const navigate = useNavigate();
 
   const [page, setPage] = useState(1);

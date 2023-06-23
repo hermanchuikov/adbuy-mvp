@@ -338,7 +338,7 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
   }
 
   return (
-    <div>
+    <div className={classes.tiktokWrapper}>
       <div className={classes.videoWrapper}>
         {/* <div className={classes.pauseBlock} onClick={() => console.log('pause')}>
         <div className={classes.pauseBlockItem}></div>
