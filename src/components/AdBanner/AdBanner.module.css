@@ -1,6 +1,5 @@
 .facebookWrapper {
   transform: scale(0.6);
-  position: absolute;
 }
 
 .facebookWrapper:nth-child(1) {
@@ -168,17 +167,14 @@
   font-size: 13px;
 }
 
-
 .instagramWrapper {
   transform: scale(0.7);
-  position: absolute;
+  /* position: absolute; */
 }
 
-
-
 .instagramWrapper:nth-child(1) {
- top: 20px;
- left: -30px;
+  top: 20px;
+  left: -30px;
 }
 
 .instagramWrapper:nth-child(2) {
@@ -187,11 +183,10 @@
 
 .instagramWrapper:nth-child(3) {
   top: 20px;
- right: -30px;
+  right: -30px;
 }
 
 .instagramBlock {
-  
   border: 1px solid rgb(219, 219, 219);
   border-radius: 8px;
   width: 470px;
@@ -339,6 +334,7 @@
     0 1px 5px 0 rgb(0 0 0 / 20%);
   width: 650px;
   cursor: pointer;
+  margin-left: 12px;
 }
 
 .googleSupTitleBlock {
@@ -388,7 +384,7 @@
 }
 
 .tiktokWrapper:nth-child(2) {
-  margin: 0 20px; 
+  margin: 0 20px;
 }
 
 .pauseBlock {
@@ -596,7 +592,6 @@
   border-radius: 8px;
 }
 
-
 .adchooseButton {
   display: flex;
   justify-content: center;
@@ -627,8 +622,36 @@
 }
 
 @media (max-width: 440px) {
-  .instagramWrapper {
-    position: static;
-    transform: scale(0.7);
+  .instagramWrapper:nth-child(2) {
+    margin: -130px 0;
   }
+
+  .facebookWrapper:nth-child(2) {
+    margin: -205px 0;
+  }
+
+  .googleWrapper {
+    transform: scale(0.5);
+  }
+
+  .googleWrapper:nth-child(1) {
+    margin-top: 20px;
+  }
+
+  .googleWrapper:nth-child(2) {
+    margin: -120px 0;
+  }
+
+  /* .googleWrapper:nth-child(3) {
+    margin-top: 20px;
+  } */
+
+  .tiktokWrapper {
+    transform: scale(0.8);
+  }
+
+  .tiktokWrapper:nth-child(2) {
+    margin: -90px 0;
+  }
+
 }

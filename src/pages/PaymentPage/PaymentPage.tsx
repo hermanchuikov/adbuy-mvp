@@ -9,7 +9,7 @@ import { useAppSelector } from '../../hooks/useAppSelector';
 // import DatePicker from 'react-datepicker';
 import { DatePicker } from '@mui/x-date-pickers';
 import 'react-datepicker/dist/react-datepicker.css';
-import axios from 'axios';
+import $api from '../../api/api';
 import Select from 'react-select';
 import classes from './Payment.module.css';
 import { phoneNumbers } from './constants/phoneNumbers';
@@ -91,12 +91,25 @@ const PaymentPage: FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmitButton = async (data: any) => {
-    const budget = data.budget + '.99';
-    const serverData = { customer: data.email, amount: budget };
+  const getServiceeFee = (budget: number) => {
+    if (budget < 1200) {
+      return 179;
+    }
 
-    await axios
-      .post('http://3.121.51.155:5000/api/checkout', serverData)
+    if (budget < 2400) {
+      return 279;
+    }
+
+    return 359;
+  };
+
+  const handleSubmitButton = async (data: any) => {
+    const budget = parseInt(data.budget);
+    const serviceFee = getServiceeFee(budget);
+    const serverData = { customer: data.email, amount: serviceFee };
+
+    await $api
+      .post('checkout', serverData)
       .then((data) => window.location.replace(data.data))
       .catch((error) => console.log(error));
   };
@@ -136,7 +149,9 @@ const PaymentPage: FC = () => {
             className={classes.paymentForm}
           >
             <div className={classes.block}>
-              <h4 className={classes.phoneNumberTitle}>Phone number</h4>
+              <h4 className={classes.phoneNumberTitle}>
+                Business phone number
+              </h4>
               <div className={classes.blockInner}>
                 <div className={classes.selectBlock}>
                   <CustomSelect
@@ -235,7 +250,7 @@ const PaymentPage: FC = () => {
                   message: `Minimum budget should be much than ${minimumBudget}`,
                 },
               })}
-              title="Daily budget"
+              title="Daily budget (USD)"
               error={errors?.budget?.message as any}
               type="number"
               placeholder={`Minimum budget: ${minimumBudget}`}

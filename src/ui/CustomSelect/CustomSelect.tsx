@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 interface ISelectProps {
   name: string;
   label?: string;
+  isDisabled?: boolean;
   control: any;
   options: object[];
   isMulti?: boolean;
@@ -18,6 +19,7 @@ interface ISelectProps {
 const CustomSelect: FC<ISelectProps> = ({
   label,
   name,
+  isDisabled,
   control,
   options,
   isMulti = false,
@@ -60,12 +62,13 @@ const CustomSelect: FC<ISelectProps> = ({
             })} : {
               control: (baseStyles, state) => ({
                 ...baseStyles,
-                // minHeight: '50px',
-                height: '50px',
+                minHeight: '50px',
+                // height: '50px',
                 borderRadius: '18px'
               }),
             }}
             options={options}
+            isDisabled={isDisabled}
             isMulti={isMulti}
             onChange={field.onChange}
             onBlur={field.onBlur}

@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
 import classes from './AdBanner.module.css';
 import { Player } from 'video-react';
+import { useMediaQuery } from 'react-responsive';
 
 interface IAdBannerProps {
   type: 'facebook' | 'instagram' | 'google' | 'tiktok';
+  id: number;
   username?: string;
   photoUrl?: string;
   button?: string;
   text?: string;
-  handleClick: () => void;
+  handleClick: (value: number) => void;
   headline?: string[];
   url?: string;
   description?: string;
@@ -19,6 +21,7 @@ interface IAdBannerProps {
 const AdBanner: FC<IAdBannerProps> = (props) => {
   const {
     type,
+    id,
     headline,
     username = 'Adbuy',
     photoUrl,
@@ -31,9 +34,16 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
     handleClick,
   } = props;
 
+  const isMobile = useMediaQuery({
+    query: '(max-width: 440px)',
+  });
+
   if (type === 'facebook') {
     return (
-      <div className={classes.facebookWrapper}>
+      <div
+        className={classes.facebookWrapper}
+        style={!isMobile ? { position: 'absolute' } : {}}
+      >
         <div className={classes.facebookBlock}>
           <div className={classes.facebookHeader}>
             <div className={classes.facebookHeaderBlock}>
@@ -67,7 +77,7 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
               <p className={classes.facebookInfoSubtitle}>{description}</p>
             </div>
             <div className={classes.facebookInfoButtonBlock}>
-              <button className={classes.facebookInfoButton}>Download</button>
+              <button className={classes.facebookInfoButton}>{button}</button>
             </div>
           </div>
 
@@ -122,7 +132,7 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
             </div>
           </div>
         </div>
-        <div className={classes.adchooseButton} onClick={handleClick}>
+        <div className={classes.adchooseButton} onClick={() => handleClick(id)}>
           <div className={classes.adchooseCircle}></div>
         </div>
       </div>
@@ -131,7 +141,10 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
 
   if (type === 'instagram') {
     return (
-      <div className={classes.instagramWrapper}>
+      <div
+        className={classes.instagramWrapper}
+        style={!isMobile ? { position: 'absolute' } : {}}
+      >
         <div className={classes.instagramBlock}>
           <div className={classes.instagramHeader}>
             <div className={classes.instagramHeaderInner}>
@@ -153,7 +166,7 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
             </div>
           </div>
 
-          <div className={classes.instagramImageBlock} >
+          <div className={classes.instagramImageBlock}>
             <img
               className={classes.instagramImage}
               src={`data:image/jpeg;base64,${photoUrl}`}
@@ -306,7 +319,7 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
             </div>
           </div>
         </div>
-        <div className={classes.adchooseButton} onClick={handleClick}>
+        <div className={classes.adchooseButton} onClick={() => handleClick(id)}>
           <div className={classes.adchooseCircle}></div>
         </div>
       </div>
@@ -316,21 +329,21 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
   if (type === 'google') {
     return (
       <div className={classes.googleWrapper}>
-      <div className={classes.googleBlock}>
-        <div className={classes.googleSupTitleBlock}>
-          <p className={classes.googleSupTitleAd}>Ad</p>
-          <p className={classes.googleSupTitle}>{url && url}</p>
+        <div className={classes.googleBlock}>
+          <div className={classes.googleSupTitleBlock}>
+            <p className={classes.googleSupTitleAd}>Ad</p>
+            <p className={classes.googleSupTitle}>{url && url}</p>
+          </div>
+          <div className={classes.googleTitleBlock}>
+            <p className={classes.googleTitle}>{headline && headline[0]} |</p>
+            <p className={classes.googleTitle}>{headline && headline[1]} |</p>
+            <p className={classes.googleTitle}>{headline && headline[2]}</p>
+          </div>
+          <p className={classes.googleDescriptionText}>
+            {description && description}
+          </p>
         </div>
-        <div className={classes.googleTitleBlock}>
-          <p className={classes.googleTitle}>{headline && headline[0]} |</p>
-          <p className={classes.googleTitle}>{headline && headline[1]} |</p>
-          <p className={classes.googleTitle}>{headline && headline[2]}</p>
-        </div>
-        <p className={classes.googleDescriptionText}>
-          {description && description}
-        </p>
-      </div>
-      <div className={classes.adchooseButton} onClick={handleClick}>
+        <div className={classes.adchooseButton} onClick={() => handleClick(id)}>
           <div className={classes.adchooseCircle}></div>
         </div>
       </div>
@@ -670,8 +683,8 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
 
             <div className={classes.tiktokFooter}>
               <div className={classes.tiktokFooterBlock}>
-                <h6 className={classes.tiktokUsername}>Adbuy.com</h6>
-                <p className={classes.tiktokTags}>#ad #perfect #hit #startup</p>
+                <h6 className={classes.tiktokUsername}>{headline}</h6>
+                <p className={classes.tiktokTags}>{description}</p>
                 <div>
                   <h6 className={classes.tiktokMusic}>{soundName}</h6>
                 </div>
@@ -684,9 +697,9 @@ const AdBanner: FC<IAdBannerProps> = (props) => {
           </div>
         </div>
       </div>
-      <div className={classes.adchooseButton} onClick={handleClick}>
-          <div className={classes.adchooseCircle}></div>
-        </div>
+      <div className={classes.adchooseButton} onClick={() => handleClick(id)}>
+        <div className={classes.adchooseCircle}></div>
+      </div>
     </div>
   );
 };

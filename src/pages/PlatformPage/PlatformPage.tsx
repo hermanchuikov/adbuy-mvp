@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Button, CheckBox, Loader } from '../../ui';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import axios from 'axios';
+import $api from '../../api/api';
 import { useMediaQuery } from 'react-responsive';
 import { setCountriesandLanguages } from '../../store/slices/adSlice';
 import { setPlatforms } from '../../store/slices/adSlice';
@@ -71,8 +71,8 @@ const PlatformPage: FC = () => {
     console.log(platformObject);
 
     setLoading(true);
-    await axios
-      .post('http://3.121.51.155:5000/api/language_location', platformObject)
+    await $api
+      .post('language_location', platformObject)
       .then((data) => {
         dispatch(setCountriesandLanguages(data.data));
       })

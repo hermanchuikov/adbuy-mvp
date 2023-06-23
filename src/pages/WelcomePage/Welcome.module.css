@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-image: url('../../assets/images/Frame\ 65.jpg');
+  background-image: url('../../assets/images/HeaderBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -12,12 +12,30 @@
 .nav {
   height: 130px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.navButton {
+  background-color: #4a3aff;
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container {
-  width: 1080px;
+  width: 1240px;
   margin: 0 auto;
 }
 
@@ -26,6 +44,19 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 64px;
+}
+
+.headerImageBlock {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerChatImage {
+  width: 290px;
+  height: 85px;
+  margin-bottom: 32px;
 }
 
 .headerInfo {
@@ -39,7 +70,7 @@
 }
 
 .headerButton {
-  background-color: #479be9;
+  background-color: #4a3aff;
   color: #fff;
   width: 270px;
   height: 60px;
@@ -74,7 +105,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1080px;
+  width: 1240px;
   margin: 0 auto;
 }
 
@@ -93,7 +124,7 @@
 .infoBlockTitle {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 24px; 
+  margin-bottom: 24px;
 }
 
 .infoBlockText {
@@ -103,7 +134,7 @@
 }
 
 .infoBlockButton {
-  background-color: #479be9;
+  background-color: #4a3aff;
   color: #fff;
   width: 240px;
   height: 55px;
@@ -119,14 +150,158 @@
   align-items: center;
 }
 
+.pricing {
+  margin-top: 64px;
+}
+
+.pricingTitle {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 62px;
+}
+
+.pricingSubtitle {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #696590;
+}
+
+.pricingBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricingAdditionalCard {
+  width: 394px;
+  box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.2);
+  margin-top: 50px;
+  border-radius: 24px;
+}
+
+.pricingMainCard {
+  width: 394px;
+  box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.2);
+  background-color: #4a3aff;
+  color: #fff;
+  border-radius: 24px;
+  margin: 0 30px;
+}
+
+.pricingContainer {
+  padding: 50px 44px 52px 44px;
+}
+
+.pricingCardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.pricingCardHeaderImage {
+  width: 72px;
+  height: 72px;
+  margin-right: 18px;
+}
+
+.pricingCardHeaderBlock {
+}
+
+.pricingHeaderSuptitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #696590;
+}
+
+.pricingCardHeaderTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #170f49;
+}
+
+.pricingCardPrice {
+  font-size: 54px;
+  color: #170f49;
+  font-weight: 700;
+}
+
+.pricingCardAdditionalText {
+  font-size: 20px;
+  color: #696590;
+  font-weight: 400;
+}
+
+.pricingCardListBlock {
+  margin-top: 18px;
+}
+
+.pricingCardListHeaderTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #170f49;
+}
+
+.pricingCardList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.pricingCardListItem {
+  display: flex;
+  align-items: center;
+}
+
+.pricingCardItemImage {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #4a3aff;
+}
+
+.pricingCardItemText {
+  font-weight: 400;
+  font-size: 18px;
+  color: #170f49;
+  margin-left: 14px;
+}
+
+.pricingCardButton {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #4a3aff;
+  border: none;
+  outline: none;
+  border-radius: 96px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media (max-width: 440px) {
   .nav {
     height: 67px;
-    padding: 16px 0;
+    padding: 16px 24px;
   }
   .navLogo {
     width: 98px;
     height: 35px;
+  }
+
+  .navButton {
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
   }
   .container {
     width: 300px;
@@ -166,49 +341,74 @@
     margin-left: 8px;
   }
 
-   .info {
+  .info {
     padding-top: 36px;
     row-gap: 64px;
-   }
+  }
 
-   .infoBlock {
+  .infoBlock {
     width: 330px;
-   }
+  }
 
-   .infoBlock:nth-child(even) {
+  .infoBlock:nth-child(even) {
     flex-direction: column-reverse;
-   }
+  }
 
-   .infoBlock:nth-child(odd) {
+  .infoBlock:nth-child(odd) {
     flex-direction: column-reverse;
-   }
+  }
 
-   .infoBlockInner {
+  .infoBlockInner {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   }
-   .infoBlockTitle {
+  }
+  .infoBlockTitle {
     font-size: 24px;
     text-align: center;
     margin-bottom: 8px;
-   }
-   .infoBlockText {
+  }
+  .infoBlockText {
     font-size: 18px;
     text-align: center;
     margin-bottom: 12px;
-   }
-   .infoBlockButton {
+  }
+  .infoBlockButton {
     width: 150px;
     height: 30px;
     font-size: 14px;
     margin: 0 auto;
-   }
-   .infoBlockImage {
-      width: 300px;
-      margin-top: 24px;
-   }
+  }
+  .infoBlockImage {
+    width: 300px;
+    margin-top: 24px;
+  }
+
+  .pricingBlock {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  .pricingAdditionalCard {
+    margin-top: 0;
+  }
+
+  .pricingAdditionalCard,
+  .pricingMainCard {
+    width: 340px;
+  }
+
+  .pricingContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pricingTitle {
+    font-size: 24px;
+  }
+  
+  .pricingSubtitle {
+    font-size: 18px;
+  }
 }
-
-

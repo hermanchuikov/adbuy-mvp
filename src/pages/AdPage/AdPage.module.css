@@ -59,10 +59,17 @@
   /* column-gap: 20px; */
   row-gap: 32px;
   margin: 0 auto;
+  min-height: 400px;
 }
 
 
 @media (max-width: 440px) {
+  .ad {
+    padding-bottom: 0;
+  }
+  .adBlock {
+    margin: -85px 0 -85px 0;
+  }
   .adHeaderBlock {
     width: 100%;
     padding: 0 6px;
@@ -82,8 +89,7 @@
   }
 
   .adBlock {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
   }
 }
+
