@@ -1,5 +1,6 @@
 .facebookWrapper {
   transform: scale(0.6);
+<<<<<<< HEAD
 }
 
 .facebookWrapper:nth-child(1) {
@@ -7,6 +8,16 @@
   left: -40px;
 }
 
+=======
+  position: absolute;
+}
+
+.facebookWrapper:nth-child(1) {
+  top: 20px;
+  left: -40px;
+}
+
+>>>>>>> 4ae4c2175c52a1a1c3a39b084d827605e1de6819
 .facebookWrapper:nth-child(2) {
   top: 20px;
 }
@@ -169,12 +180,23 @@
 
 .instagramWrapper {
   transform: scale(0.7);
+<<<<<<< HEAD
   /* position: absolute; */
 }
 
 .instagramWrapper:nth-child(1) {
   top: 20px;
   left: -30px;
+=======
+  position: absolute;
+}
+
+
+
+.instagramWrapper:nth-child(1) {
+ top: 20px;
+ left: -30px;
+>>>>>>> 4ae4c2175c52a1a1c3a39b084d827605e1de6819
 }
 
 .instagramWrapper:nth-child(2) {
@@ -183,7 +205,11 @@
 
 .instagramWrapper:nth-child(3) {
   top: 20px;
+<<<<<<< HEAD
   right: -30px;
+=======
+ right: -30px;
+>>>>>>> 4ae4c2175c52a1a1c3a39b084d827605e1de6819
 }
 
 .instagramBlock {
@@ -384,7 +410,11 @@
 }
 
 .tiktokWrapper:nth-child(2) {
+<<<<<<< HEAD
   margin: 0 20px;
+=======
+  margin: 0 20px; 
+>>>>>>> 4ae4c2175c52a1a1c3a39b084d827605e1de6819
 }
 
 .pauseBlock {
@@ -622,6 +652,7 @@
 }
 
 @media (max-width: 440px) {
+<<<<<<< HEAD
   .instagramWrapper:nth-child(2) {
     margin: -130px 0;
   }
@@ -655,3 +686,10 @@
   }
 
 }
+=======
+  .instagramWrapper {
+    position: static;
+    transform: scale(0.7);
+  }
+}
+>>>>>>> 4ae4c2175c52a1a1c3a39b084d827605e1de6819
