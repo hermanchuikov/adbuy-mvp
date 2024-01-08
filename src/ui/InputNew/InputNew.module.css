@@ -1,0 +1,67 @@
+/* .inputContainer {
+    margin-bottom: 64px;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input::placeholder {
+  font-size: 18px;
+  color: #bcbcbc;
+}
+
+.inputTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.input {
+  border: 1px solid #d9d9d9;
+  border-radius: 18px;
+  padding-left: 20px;
+  font-size: 22px;
+  width: 435px;
+  height: 70px;
+  padding-right: 8px;
+}
+
+.errorContainer {
+  position: relative;
+}
+
+.inputError {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #e71e1e;
+}
+
+@media (max-width: 440px) {
+  .inputTitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .input {
+    font-size: 14px;
+    border-radius: 7px;
+    height: 40px;
+    padding-left: 8px;
+  }
+  .input::placeholder {
+    font-size: 14px;
+  }
+  .inputError {
+    top: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #e71e1e;
+  }
+}
