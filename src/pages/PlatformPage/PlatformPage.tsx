@@ -85,7 +85,7 @@ const PlatformPage: FC = () => {
       .then(() => navigate('/form?mode=custom'))
       .catch((e: any) => {
         console.log(e);
-        setResponseError(e.errorMessage);
+        setResponseError(e.response.data.errorMessage);
       })
       .finally(() => {
         setLoading(false);
