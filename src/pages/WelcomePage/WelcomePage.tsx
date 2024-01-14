@@ -20,7 +20,7 @@ import { Footer } from '../../components';
 
 const TARIFF_PLANS = {
   month: {
-    low: { price: 8, discountPrice: null },
+    low: { price: 8.00, discountPrice: null },
     medium: { price: 14, discountPrice: null },
     high: { price: 21, discountPrice: null },
   },
