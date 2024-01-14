@@ -1,15 +1,18 @@
 .ad {
-  padding: 32px 0 96px 0;
-  background-color: #fcfcfc;
+  padding: 40px 0 96px 0;
+  background-color: #f5f5ff;
+  display: flex;
+  justify-content: space-between;
   /* background-image: url('../../assets/images/Frame\ 65.jpg');
   background-repeat: no-repeat;
   background-size: cover; */
   width: 100%;
   height: 100%;
+  /* flex: 1; */
 }
 
 .adHeader {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   /* display: flex;
     justify-content: center;
@@ -18,12 +21,11 @@
 }
 
 .adHeaderBlock {
-  width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 75px;
 }
 
 .adHeaderBlockInner {
@@ -32,8 +34,8 @@
 }
 
 .adHeaderImage {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 .adHeaderPlatform {
@@ -49,12 +51,93 @@
   margin-left: 24px;
 }
 
+.gradientTitle {
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+          135deg,
+          #dc8d25,
+          #ef7531 19%,
+          #fc1414 35%,
+          #e91547 48%,
+          #7126ab 71%,
+          #2156b5 100%,
+          #fff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 42px;
+  overflow: visible;
+  text-align: center;
+  margin-left: 20px;
+}
+
 .adBlock {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 20px;
+  column-gap: 80px;
   row-gap: 32px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 555px;
+}
+
+.loaderText {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 440px) {
+  .ad {
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+  .gradientTitle {
+    margin-left: 0;
+  }
+  .buttonBlock {
+    margin: 0 12px;
+    width: 100%;
+  }
+  /* .adBlock {
+    margin: -85px 0 -85px 0;
+  } */
+  .adBlock {
+    row-gap: 0px;
+  }
+  .adHeaderBlock {
+    width: 100%;
+    padding: 0 6px;
+    margin-bottom: 0px;
+  }
+  .adHeaderBlockInner {
+    flex-direction: column;
+  }
+  .adHeaderImage {
+    width: 55px;
+    height: 55px;
+  }
+  .adHeaderTitle {
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* .adBlock {
+    display: flex;
+  } */
+
+  .gradientTitle {
+    font-size: 25px;
+    padding-top: 10px;
+    /* padding-bottom: 40px; */
+  }
 }

@@ -1,0 +1,64 @@
+.refund {
+    background-color: #f5f5ff;
+}
+
+.refundBlock {
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.refundTitle {
+    margin-top: 50px;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.refundText {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.refundTextEnd {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px
+}
+
+.refundSubtext {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+@media (max-width: 490px) {
+    .refund {
+        padding: 0 0 0 0;
+        flex: 1;
+    }
+    .refundBlock {
+        width: 100%;
+        padding: 0 12px;
+        height: auto;
+    }
+    .refundTitle {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+    .refundText {
+        font-size: 16px;
+    }
+    .refundTextEnd {
+        font-size: 16px;
+        margin-bottom: 10px
+    }
+    .refundSubtext {
+        font-size: 16px;
+    }
+}

@@ -55,18 +55,31 @@ const CustomSelect: FC<ISelectProps> = ({
         rules={rules}
         render={({ field }) => (
           <Select
-            styles={isMobile ? {control: (baseStyles, state) => ({
-              ...baseStyles,
-              height: '40px',
-              borderRadius: '7px'
-            })} : {
-              control: (baseStyles, state) => ({
-                ...baseStyles,
-                minHeight: '50px',
-                // height: '50px',
-                borderRadius: '18px'
-              }),
-            }}
+            styles={
+              isMobile
+                ? {
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      height: '40px',
+                      borderRadius: '7px',
+                      fontFamily: 'Montserrat, sans-serif',
+                    }),
+                  }
+                : {
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      minHeight: '50px',
+                      // height: '50px',
+                      borderRadius: '18px',
+                      fontFamily: 'Montserrat, sans-serif',
+                    }),
+                    menuPortal: (base) => ({
+                      ...base,
+                      fontSize: 16,
+                      color: 'red',
+                    }),
+                  }
+            }
             options={options}
             isDisabled={isDisabled}
             isMulti={isMulti}

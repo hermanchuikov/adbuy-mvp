@@ -1,0 +1,66 @@
+.privacy {
+    background-color: #f5f5ff;
+}
+
+.privacyBlock {
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.privacyTitle {
+    margin-top: 50px;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.privacyText {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.privacyTextEnd {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px
+}
+
+.privacySubtext {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+@media (max-width: 490px) {
+    .privacy {
+        padding: 0 0 0 0;
+        flex: 1;
+    }
+    .privacyBlock {
+        width: 100%;
+        padding: 0 12px;
+        height: auto;
+    }
+    .privacyTitle {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+    .privacyText {
+        font-size: 16px;
+    }
+
+    .privacyTextEnd {
+        font-size: 16px;
+        margin-bottom: 10px
+    }
+
+    .privacySubtext {
+        font-size: 16px;
+    }
+}

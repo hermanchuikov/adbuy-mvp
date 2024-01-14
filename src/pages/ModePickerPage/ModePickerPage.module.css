@@ -1,0 +1,156 @@
+.mode{
+    padding: 38px 0;
+    padding-bottom: 110px;
+    background-color: #f5f5ff;
+}
+
+.modeBlock{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.modeCard{
+    width: 555px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 500px
+}
+
+.modeCard:hover {
+    transform: scale(1.05); /* Увеличиваем размер при наведении */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    cursor: pointer;
+}
+
+.modeCardCustom{
+    width: 555px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 500px
+}
+
+.modeCardCustom:hover {
+    transform: scale(1.05); /* Увеличиваем размер при наведении */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    cursor: pointer;
+}
+
+.modeImgContainer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.modeImgContainerSimplified{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px
+    /*margin-bottom: 95px;*/
+}
+
+.modeImg{
+    width: 333px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeImgSimplified{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modeLabel{
+    text-align: center;
+    margin-bottom: 23px;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.modeText{
+    opacity: 0.65;
+    line-height: 25px;
+}
+
+.modeTextExtra{
+    opacity: 0.65;
+    line-height: 16px;
+    font-size: 15px;
+}
+
+.modeTextSpace{
+    opacity: 0.65;
+    line-height: 25px;
+    padding-top: 16px;
+}
+
+.modeLink{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+@media (max-width: 440px) {
+    .modeBlock{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .modeCard{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .modeCardCustom{
+        width: 80%;
+        margin: 0 auto;
+        height: 537px;
+        padding: 20.1px;
+    }
+
+    .modeImgSimplified{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .modeImgContainer{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+
+    .modeTextSpace{
+        opacity: 0.65;
+        line-height: 25px;
+        padding-top: 16px;
+    }
+
+
+
+
+}

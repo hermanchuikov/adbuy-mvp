@@ -1,5 +1,5 @@
 import React, { FC, forwardRef } from 'react';
-import classes from './Input.module.css';
+import classes from './InputNew.module.css';
 import InputMask from 'react-input-mask';
 
 interface IFormInputProps {
@@ -17,7 +17,7 @@ interface IFormInputProps {
   width?: any;
 }
 
-const Input: FC<IFormInputProps> = forwardRef(
+const InputNew: FC<IFormInputProps> = forwardRef(
   (
     {
       inputStyles,
@@ -78,4 +78,4 @@ const Input: FC<IFormInputProps> = forwardRef(
   }
 );
 
-export default Input;
+export default InputNew;

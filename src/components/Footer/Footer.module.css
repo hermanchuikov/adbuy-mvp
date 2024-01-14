@@ -1,38 +1,198 @@
 .footer {
-    width: 100%;
-    padding: 48px 0 16px 0;
+  width: 100%;
+  padding: 45px 0 21px 0;
+  background-color: #f5f5ff;
 }
 
 .container {
-    margin: 0 auto;
-    width: 1080px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.adbuyLogo {
+  width: 250px;
+}
+
+/* .locContainer {
+  margin: 0 auto;
+  width: 1080px;
+  align-items: center;
+  margin-top: 8px;
+} */
+
+.footerTextBlock {
+  margin-top: 24px;
 }
 
 .footerText {
-    font-size: 22px;
+  font-size: 19px;
+  color: #a5b7c7;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: #d0dae2;
+  margin: 24px auto;
+}
+
+.footerLocText {
+  font-size: 19px;
+  color: #a5b7c7;
 }
 
 .footerLink {
-    color: #479BE9;
-    font-size: 22px;
+  font-size: 19px;
+  color: #7b7e95;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+
+.uui {
+  border-bottom: 1px solid #4d4d4d;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  padding-bottom: 1.6rem;
+  display: flex;
+}
+
+.footerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 18px;
+}
+
+.footerInfo {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  color: white;
+  padding: 8.6px 15px;
+  text-align: center;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
+  background-color: #ff3067;
+
+  display: flex;
+}
+
+/* Optional: If you want to change the button styles on hover */
+.button:hover {
+  scale: 1.1;
+}
+
+.socialblock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 13px;
+  margin-top: 15px;
+}
+
+.socialButton {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+  transition: all 300ms ease-in;
+  background-color: #ff3067;
 }
 
 @media (max-width: 440px) {
-    .footer {
-        padding: 36px 0 8px 0;
-    }
-    .container {
-        width: 100%;
-        padding: 0 8px;
-        flex-direction: column;
-    }
-    .footerText {
-        font-size: 16px;
-    }
-    .footerLink {
-        font-size: 16px;
-    }
+  .footer {
+    padding: 32px 0 20px 0;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footerBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 7px;
+  }
+
+  .socialblock {
+    justify-content: center;
+  }
+
+  .adbuyLogo {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .footerInfo {
+    flex-direction: column-reverse;
+  }
+
+  .footerTextBlock {
+    margin: 0 0 15px 0;
+  }
+
+  .locContainer {
+    width: 100%;
+    padding: 0 3px;
+    flex-direction: column;
+  }
+  .footerText {
+    font-size: 12px;
+    text-align: center;
+    color: #a5b7c7;
+  }
+  .footerLink {
+    font-size: 24px;
+  }
+
+  .footerButtons {
+    flex-direction: column;
+  }
+
+  .footerLocText {
+    font-size: 12px;
+    text-align: center;
+    color: #a5b7c7;
+  }
+
+  .button {
+    font-size: 12px;
+    margin: 18px;
+    background-image: none;
+    background-color: inherit;
+    box-shadow: none;
+    margin: 0;
+    font-weight: 400;
+    color: #a5b7c7;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+  }
+
+  .socialButton {
+  }
 }

@@ -15,30 +15,27 @@ const CheckBox: FC<ICheckBoxProps> = forwardRef((props) => {
   const { children, name, control, rules, isChecked } = props;
   const [active, setActive] = useState(false);
 
-  // const handleCheckBox = (cb: any) => {
-  //   setActive(true);
-  //   cb();
-  // }
-
   return (
-    <div className={active ? classes.activeBlock : classes.block} onClick={() => setActive(isActive => !isActive)}>
+    <div className={classes.wrapper}>
       <Controller
         name={name}
         control={control}
         rules={rules}
         render={({ field }) => (
-          <>
-            <input
-              onChange={field.onChange}
-              onClick={() => setActive(isActive => !isActive)}
-              onBlur={field.onBlur}
-              type="checkbox"
-              id={name}
-              className={classes.input}
-              defaultChecked={false}
-            />
-            <label htmlFor={name}>{children}</label>
-          </>
+          <div className={active ? classes.activeBlock : classes.block}>
+            <label className={classes.label}>
+              <input
+                onChange={field.onChange}
+                onClick={() => setActive((isActive) => !isActive)}
+                onBlur={field.onBlur}
+                type="checkbox"
+                id={name}
+                className={classes.input}
+                defaultChecked={false}
+              />
+              {children}
+            </label>
+          </div>
         )}
       />
     </div>

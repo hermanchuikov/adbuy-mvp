@@ -1,6 +1,30 @@
 .platform {
   padding: 75px 0;
-  background-color: #fcfcfc;
+  background-color: #f5f5ff;
+}
+
+.gradientTitle {
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #dc8d25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 100%,
+    #fff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 57px;
+  overflow: visible;
+  text-align: center;
 }
 
 .container {
@@ -23,7 +47,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 64px;
-  margin-bottom: 96px;
+  margin-bottom: 77.77px;
 }
 
 .platformBlockButton {
@@ -51,9 +75,15 @@
   cursor: pointer;
 }
 
-.platformImage {
+/* .platformImage {
+  display: inline-flex;
   width: 100px;
   height: 100px;
+} */
+
+.checkboxImage {
+  width: 100%;
+  height: 100%;
 }
 
 .errorMessage {
@@ -89,11 +119,17 @@
   .platformBlock {
     margin-top: 18px;
     margin-bottom: 36px;
+    /* flex-direction: column; */
+    row-gap: 36px;
+    flex-wrap: wrap;
   }
-  .checkboxImage {
+  .gradientTitle {
+    font-size: 24.7px;
+  }
+  /* .checkboxImage {
     width: 41px;
     height: 41px;
-  }
+  } */
   .errorMessage {
     top: 12px;
     font-size: 14px;

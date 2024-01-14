@@ -1,0 +1,38 @@
+.wrapper {
+  width: 48%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 12px;
+  padding-top: 25px;
+}
+
+.errorContainer {
+  position: relative;
+}
+
+.inputError {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #e71e1e;
+  border-radius: 18px;
+}
+
+@media (max-width: 440px) {
+  .wrapper {
+    width: 100%;
+  }
+  .title {
+    font-size: 16px;
+    padding-bottom: 4px;
+  }
+  .inputError {
+    font-size: 12px;
+    top: 4px;
+  }
+}

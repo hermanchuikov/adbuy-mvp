@@ -1,14 +1,44 @@
 .payment {
-  background-color: #fcfcfc;
+  background-color: #f5f5ff;
 }
 
 .container {
-  width: 900px;
+  width: 1111px;
   margin: 0 auto;
 }
 
+.loaderText {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
 .paymentBlock {
-  padding: 75px 0;
+  padding: 50px 0;
+}
+
+.gradientTitle {
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #dc8d25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 100%,
+    #fff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 42px;
+  overflow: visible;
+  text-align: center;
 }
 
 .paymentTitle {
@@ -21,7 +51,8 @@
 .paymentForm {
   display: flex;
   flex-direction: column;
-  row-gap: 64px;
+  row-gap: 50px;
+  margin-top: 37px;
 }
 
 .selectBlock {
@@ -35,7 +66,48 @@
 .phoneNumberTitle {
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.paymentDetailsTitle {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.zeroBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 44px;
+  padding-top: 26px;
+  padding-bottom: 30px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.firstBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 44px;
+  padding-top: 10px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.secondBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 44px;
+  padding-top: 26px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .blockInner {
@@ -45,9 +117,11 @@
 }
 
 .dateInner {
+  padding-top: 21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 18px;
 }
 
 .dateTitle {
@@ -57,7 +131,8 @@
 }
 
 .datePicker {
-  border-radius: 18px;
+  background-color: white;
+  width: 430px;
 }
 
 .errorBlock {
@@ -79,7 +154,144 @@
   padding-left: 20px;
   font-size: 22px;
   width: 100%;
+  height: 70px;
+}
+
+.cardBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardForm {
+  width: 60%;
+}
+
+.cardFormBlock {
+  margin-top: 24px;
+  font-size: 1px;
+}
+
+.cardImageBlock {
+  width: 35%;
+}
+
+.cardImage {
+  padding-top: 38px;
+
+  width: 100%;
+}
+
+.cardFormBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budgetExtraText {
+  opacity: 0.65;
+  font-size: 18px;
+  padding-top: 18px;
+}
+
+.budgetExtraText2 {
+  opacity: 0.65;
+  font-size: 18px;
+  padding-top: 14px;
+}
+
+.budgetTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+.budgetSubtitle {
+  font-size: 20px;
+  color: #2b2b2b;
+  margin-bottom: 18px;
+}
+
+.budgetLogo {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.budgetPerDayText {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.budgetDollarText {
+  font-size: 21px;
+}
+
+.withStripe {
+  width: 150px;
   height: 50px;
+  margin-left: 30px;
+  margin-top: -7.65px;
+}
+
+.buttonWithImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  padding: 25px 0;
+  background-color: #33d684;
+}
+
+.buttonWithImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonWithImageText {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 27px;
+  padding-right: 10px;
+}
+
+.buttonWithImageImage {
+  width: 78.4px;
+  height: 34.2px;
+}
+
+@media (max-width: 440px) {
+  .buttonWithImage {
+    padding: 7px 0;
+    font-size: 14px;
+  }
+}
+
+/* Define the ::after pseudo-element for the icon */
+.button::after {
+  content: ''; /* Required for pseudo-elements */
+  background-image: url('../../assets/images/with_stripe.png'); /* Replace with the path to your PNG icon */
+  background-size: 16px; /* Set the desired width for your icon */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the icon vertically */
+  width: 40px; /* Set the desired width for your icon */
+  height: 40px; /* Set the desired height for your icon */
+  position: absolute; /* Position the icon absolutely within the button */
+  top: 50%; /* Align the icon vertically in the middle */
+  right: 8px; /* Adjust as needed for spacing between title and icon */
+  transform: translateY(-50%); /* Adjust to vertically center the icon */
 }
 
 @media (max-width: 440px) {
@@ -91,6 +303,10 @@
   .paymentTitle {
     font-size: 24px;
     margin-bottom: 18px;
+  }
+
+  .gradientTitle {
+    font-size: 30px;
   }
 
   .paymentBlock {
@@ -129,10 +345,39 @@
     border-radius: 7px;
     border: 1px solid #d9d9d9;
   }
-  
 
   .dateInner {
-    flex-direction: column;
     row-gap: 36px;
+  }
+
+  .dateError {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #e71e1e;
+  }
+
+  .paymentDetailsTitle {
+    font-size: 24px;
+  }
+
+  .budgetExtraText {
+    font-size: 12px;
+    padding-top: 12px;
+  }
+  .budgetExtraText2 {
+    font-size: 12px;
+    padding-top: 12px;
+  }
+
+  .buttonWithImageText {
+    font-size: 24px;
+    padding-right: 8.2px;
+  }
+
+  .budgetSubtitle {
+    font-size: 16px;
   }
 }

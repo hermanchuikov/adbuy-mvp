@@ -1,0 +1,168 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: rgb(237, 216, 216);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 120px;
+}
+
+.logo {
+  width: 400px;
+}
+
+.logoButton {
+  background-color: inherit;
+  border: none;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.authBlock {
+  text-align: center;
+  /* margin: 24px 120px 0 120px; */
+  width: 1100px;
+  margin-top: 36px;
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 16px 24px 32px 24px;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.authTitle {
+  color: #ff3067;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.authSubtitle {
+  color: #262626;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.dividerLine {
+  position: relative;
+  width: 50%;
+  height: 1px;
+  background-color: #262626;
+  margin: 24px auto;
+}
+
+.dividerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5f5ff;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.googleButton {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 80px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 18px auto;
+  column-gap: 18px;
+}
+
+.googleButtonLogo {
+  width: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+  margin: 18px 0;
+}
+
+.authForgotPassword {
+  margin-top: 24px;
+  cursor: pointer;
+  color: #ff3067;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 16px 0;
+  border-radius: 80px;
+  background-color: #ff3067;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 48px;
+  cursor: pointer;
+  width: 1110px;
+}
+
+.authRedirectText {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.authRedirectLink {
+  color: #ff3067;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 440px) {
+  .container {
+    margin: 0 14px;
+  }
+  .logo {
+    width: 200px;
+  }
+  .auth {
+    width: 100%;
+  }
+  .authTitle {
+    font-size: 24px;
+  }
+  .authSubtitle {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .authBlock {
+    width: 100%;
+    margin: 0;
+    margin-top: 24px;
+  }
+  .form {
+    row-gap: 16px;
+  }
+  .submitButton {
+    padding: 0;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 24px;
+    font-size: 20px;
+  }
+}

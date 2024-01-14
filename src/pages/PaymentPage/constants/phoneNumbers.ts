@@ -1,4 +1,5 @@
 export const phoneNumbers = [
+  { value: '+1', label: '🇺🇸 United States (+1)' },
   { value: '+93', label: '🇦🇫 Afghanistan (+93)' },
   { value: '+358', label: '🇦🇽 Åland Islands (+358)' },
   { value: '+355', label: '🇦🇱 Albania (+355)' },
@@ -231,7 +232,6 @@ export const phoneNumbers = [
   { value: '+380', label: '🇺🇦 Ukraine (+380)' },
   { value: '+971', label: '🇦🇪 United Arab Emirates (+971)' },
   { value: '+44', label: '🇬🇧 United Kingdom (+44)' },
-  { value: '+1', label: '🇺🇸 United States (+1)' },
   { value: '+598', label: '🇺🇾 Uruguay (+598)' },
   { value: '+998', label: '🇺🇿 Uzbekistan (+998)' },
   { value: '+678', label: '🇻🇺 Vanuatu (+678)' },

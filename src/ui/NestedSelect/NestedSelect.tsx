@@ -1,162 +1,261 @@
 //@ts-nocheck
-import React, { useState } from 'react';
+import { FC, useState, useEffect } from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { Controller } from 'react-hook-form';
+import { checkBoxGroup } from '../../assets/constants/checkBoxGroup';
+import classes from './NestedSelect.module.css';
 
-const data = [
-  {
-    id: 1,
-    label: 'USA',
-    children: [
-      { id: 11, label: 'New York' },
-      { id: 12, label: 'Los Angeles' },
-      { id: 13, label: 'Chicago' },
-    ],
-  },
-  {
-    id: 2,
-    label: 'Germany',
-    children: [
-      { id: 21, label: 'Berlin' },
-      { id: 22, label: 'Munich' },
-      { id: 23, label: 'Hamburg' },
-    ],
-  },
-  {
-    id: 3,
-    label: 'Japan',
-    children: [
-      { id: 31, label: 'Tokyo' },
-      { id: 32, label: 'Osaka' },
-      { id: 33, label: 'Kyoto' },
-    ],
-  },
-];
+interface IChildCheckGroup {
+  value: string;
+  type: 'child' | string;
+  isChecked: boolean;
+}
+
+interface IParentCheckGroup {
+  value: string;
+  type: 'parent' | string;
+  isChecked: boolean;
+  isOpen: boolean;
+  children: IChildCheckGroup[];
+}
+
+// const checkBoxGroup: IParentCheckGroup[] = [
+//   {
+//     value: 'USA',
+//     type: 'parent',
+//     isChecked: false,
+//     isOpen: false,
+//     children: [
+//       {
+//         value: 'New York',
+//         type: 'child',
+//         isChecked: false,
+//       },
+//       {
+//         value: 'Los Angeles',
+//         type: 'child',
+//         isChecked: false,
+//       },
+//       {
+//         value: 'Washington',
+//         type: 'child',
+//         isChecked: false,
+//       },
+//     ],
+//   },
+//   {
+//     value: 'Ukraine',
+//     type: 'parent',
+//     isOpen: false,
+//     isChecked: false,
+//     children: [
+//       {
+//         value: 'Kyiv',
+//         type: 'child',
+//         isChecked: false,
+//       },
+//       {
+//         value: 'Odesa',
+//         type: 'child',
+//         isChecked: false,
+//       },
+//     ],
+//   },
+// ];
 
 interface INestedSelect {
   register: any;
+  control: any;
   setValue: any;
-  getValues: any;
+  title?: string;
 }
 
-const NestedSelect = (props) => {
-  const { register, setValue, getValues } = props;
-  const [selectedData, setSelectedData] = useState({});
-  const [updatedLocations, setUpdatedLocations] = useState([]);
+const NestedSelect: FC<INestedSelect> = (props: any) => {
+  const { register, control, setValue, title } = props;
 
-  const handleParentChange = (parentId) => {
-    const parentItem = data.find((item) => item.id === parentId);
+  const [openList, setOpenList] = useState(false);
+  const [parents, setParents] = useState<string[]>([]);
 
-    if (selectedData[parentId]) {
-      const updatedData = { ...selectedData };
-      delete updatedData[parentId];
-      setSelectedData(updatedData);
-      parentItem.children.forEach((child) => {
-        const childFieldName = `child_${child.id}`;
-        setValue(childFieldName, false);
-      });
-    } else {
-      const updatedData = { ...selectedData, [parentId]: [] };
-      setSelectedData(updatedData);
-      parentItem.children.forEach((child) => {
-        const childFieldName = `child_${child.id}`;
-        setValue(childFieldName, true);
-      });
+  const [isUpdate, setUpdate] = useState<number>(1);
+
+  const [checkGroups, setCheckGroups] =
+    useState<IParentCheckGroup[]>(checkBoxGroup);
+
+  console.log(checkGroups);
+
+  useEffect(() => {
+    const parentList = [];
+    for (let obj of checkGroups) {
+      if (obj.children) {
+        const isParentChecked = obj.children.some((item) => item.isChecked);
+        if (isParentChecked) {
+          parentList.push(obj.value);
+        }
+      }
+    }
+    setParents(parentList);
+  }, [isUpdate]);
+
+  const handleParentChange = (parentIdx: number) => {
+    const updatedCheckGroups = [...checkGroups];
+    updatedCheckGroups[parentIdx].isChecked =
+      !updatedCheckGroups[parentIdx].isChecked;
+    const isParentChecked = updatedCheckGroups[parentIdx].isChecked;
+
+    updatedCheckGroups[parentIdx].children.map(
+      (item) => {item.isChecked = isParentChecked}
+    );
+
+    setCheckGroups(updatedCheckGroups);
+
+    // const updatedCheckGroups = [...checkGroups];
+    // updatedCheckGroups[parentIdx].isChecked = true;
+    // const parentChecked = updatedCheckGroups[parentIdx].children.every(
+    //   (child) => child.isChecked
+    // );
+    // updatedCheckGroups[parentIdx].children.forEach((child) => {
+    //   child.isChecked = !parentChecked;
+    // });
+    // setCheckGroups(updatedCheckGroups);
+
+    // const selectedChildren = updatedCheckGroups[parentIdx].children
+    //   .filter((child) => child.isChecked)
+    //   .map((child) => child.value);
+
+    // setValue(updatedCheckGroups[parentIdx].value, selectedChildren);
+    // setUpdate((value) => (value += 1));
+  };
+
+  const handleChildChange = (parentIdx: number, childIdx: number) => {
+    const updatedCheckGroups = [...checkGroups];
+    // const updatedCheckGroups = [...checkGroups];
+    // updatedCheckGroups[parentIdx].children[childIdx].isChecked =
+    //   !updatedCheckGroups[parentIdx].children[childIdx].isChecked;
+    // setCheckGroups(updatedCheckGroups);
+
+    // const selectedChildren = updatedCheckGroups[parentIdx].children
+    //   .filter((child) => child.isChecked)
+    //   .map((child) => child.value);
+
+    // setValue(updatedCheckGroups[parentIdx].value, selectedChildren);
+    // setUpdate((value) => (value += 1));
+  };
+
+  const checkAllChildCheckBoxes = (childrenCheckBoxes: IChildCheckGroup[]) => {
+    return childrenCheckBoxes.every((item) => item.isChecked === true);
+  };
+
+  const checkSomeChildCheckBoxes = (childrenCheckBoxes: IChildCheckGroup[]) => {
+    const allChecked = checkAllChildCheckBoxes(childrenCheckBoxes);
+    if (allChecked) {
+      return false;
     }
 
-    const updatedLocations = [];
-    Object.entries(selectedData).forEach(([parentId, children]) => {
-      const country = data.find((item) => item.id === parseInt(parentId)).label;
-      const cities = children;
-      console.log(cities);
-      updatedLocations.push({
-        country,
-        cities,
-      });
-    });
-    setValue('locations', updatedLocations);
+    return childrenCheckBoxes.some((item) => item.isChecked === true);
   };
 
-  const handleChildChange = (parentId, childId) => {
-    const childFieldName = getLabelById(parentId, childId);
-    
-    if (selectedData[parentId]) {
-      const updatedData = {
-        ...selectedData,
-        [parentId]: selectedData[parentId].includes(childId)
-          ? selectedData[parentId].filter((id) => id !== childId)
-          : [...selectedData[parentId], childId],
-      };
-      setSelectedData(updatedData);
-    } else {
-      const updatedData = {
-        ...selectedData,
-        [parentId]: [childId],
-      };
-      setSelectedData(updatedData);
-    }
+  const handleOpenChildren = (parentIdx: number) => {
+    const updatedCheckGroups = [...checkGroups];
 
-    setValue(childFieldName, !getValues(childFieldName));
+    const isOpen = checkGroups[parentIdx].isOpen;
+    updatedCheckGroups[parentIdx].isOpen = !isOpen;
 
-    const updatedLocations = [];
-    Object.entries(selectedData).forEach(([parentId, children]) => {
-      const country = data.find((item) => item.id === parseInt(parentId)).label;
-      const cities = children.map((childId) => getLabelById(parseInt(parentId), childId));
-      updatedLocations.push({
-        country,
-        cities,
-      });
-    });
-    setValue('locations', updatedLocations);
+    setCheckGroups(updatedCheckGroups);
   };
 
-  const registeredValues = getValues();
-
-  const getLabelById = (parentId, childId) => {
-    const parentItem = data.find((item) => item.id === parentId);
-    const childItem = parentItem.children.find((child) => child.id === childId);
-    return childItem ? childItem.label : '';
+  const handleOpenSelect = () => {
+    setOpenList((value) => !value);
   };
+
+  // console.log(`Check groups: ${checkGroups[0]}`);
 
   return (
     <div>
-      <div>
-        {Object.entries(selectedData).map(([parentId, children]) => (
-          <div key={parentId}>
-            <input type="text" value={data.find((item) => item.id === parseInt(parentId)).label} readOnly />
-            <ul>
-              {children.map((childId) => (
-                <li key={childId}>{getLabelById(parseInt(parentId), childId)}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div>
-        {data.map((item) => (
-          <div key={item.id}>
-            <label>
-              <input
-                type="checkbox"
-                {...register(`parent_${item.id}`)}
-                onChange={() => handleParentChange(item.id)}
+      {title && <h6 className={classes.title}>{title}</h6>}
+      <div className={classes.select}>
+        <div className={classes.selectHeader} onClick={handleOpenSelect}>
+          {parents.map((item, idx) => {
+            return (
+              <div className={classes.selectedBlock} key={idx}>
+                <p className={classes.selectedText}>{item}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className={openList ? classes.selectList : classes.closedSelectList}
+        >
+          {checkBoxGroup.map((parentCheckBox, parentIdx) => {
+            return (
+              // <div>
+
+              <Controller
+                name={parentCheckBox.value}
+                control={control}
+                render={({ field }) => (
+                  <>
+                    <div className={classes.selectRow}>
+                      <FormControlLabel
+                        label={parentCheckBox.value}
+                        control={
+                          <Checkbox
+                            onChange={() => {
+                              handleParentChange(parentIdx);
+                            }}
+                            checked={checkAllChildCheckBoxes(
+                              parentCheckBox.children
+                            )}
+                            indeterminate={checkSomeChildCheckBoxes(
+                              parentCheckBox.children
+                            )}
+                          />
+                        }
+                      />
+                      {parentCheckBox.children ? (
+                        <div
+                          className={classes.selectArrow}
+                          onClick={() => handleOpenChildren(parentIdx)}
+                        ></div>
+                      ) : null}
+                    </div>
+
+                    <div
+                      className={
+                        parentCheckBox.isOpen
+                          ? classes.selectSubBlock
+                          : classes.closedSelectSubBlock
+                      }
+                    >
+                      {parentCheckBox.children &&
+                        parentCheckBox.children.map(
+                          (childCheckBox, childIdx) => {
+                            return (
+                              <div className={classes.selectRow}>
+                                <FormControlLabel
+                                  label={childCheckBox.value}
+                                  control={
+                                    <Checkbox
+                                      onChange={() =>
+                                        handleChildChange(parentIdx, childIdx)
+                                      }
+                                      checked={childCheckBox.isChecked}
+                                    />
+                                  }
+                                />
+                              </div>
+                            );
+                          }
+                        )}
+                    </div>
+                  </>
+                )}
               />
-              {item.label}
-            </label>
-            <ul>
-              {item.children.map((child) => (
-                <li key={child.id}>
-                  <label>
-                    <input
-                      type="checkbox"
-                      {...register(`child_${child.id}`)}
-                      onChange={() => handleChildChange(item.id, child.id)}
-                    />
-                    {child.label}
-                  </label>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+
+              // </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

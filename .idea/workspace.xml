@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e699854-9039-405e-8418-55f21e12f13f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/NodeService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/checkBoxGroup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/locations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/otherPlatformDict.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/otherPlatformLocations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/tiktokDict.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/constants/tiktokLocations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/LogoAdbuyNew.3c71d6b4050059ece1346dd68ae9e2d5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/adbuyCard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/custom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons8-instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons8-tiktok.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/info1 (2).svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/infoSwcondImageNew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/leftCircle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/leftCircle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/pricing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/rightCircle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/simplified.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/thirdCardImageNEw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ModePickerPage/ModePickerPage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ModePickerPage/ModePickerPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/NestedDropdown/NestedDropdown.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/NestedDropdown/NestedDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Portal/Portal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/adbuy_mvp_16.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/adbuy_mvp_1482.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adbuy.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/adbuy.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/LogoAdbuy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/LogoAdbuy.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/firstCardImageNew.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/firstCardImageNew.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/google100.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google100.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/headerImageNew.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/headerImageNew.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/infoFirstImageNewest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/infoFirstImageNewest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/infoFirstImageNewest.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/infoFirstImageNewest.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/infoSecondImageNew.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/infoSecondImageNew.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/platform-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/platform-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/platform-1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/platform-1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/platform-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/platform-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdBanner/AdBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AdBanner/AdBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdBanner/AdBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AdBanner/AdBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdPage/AdPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdPage/AdPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdPage/AdPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdPage/AdPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CongratsPage/CongratsPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CongratsPage/CongratsPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CongratsPage/CongratsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CongratsPage/CongratsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FormPage/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FormPage/Form.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FormPage/FormPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FormPage/FormPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaymentPage/Payment.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaymentPage/Payment.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaymentPage/PaymentPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaymentPage/PaymentPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PaymentPage/constants/phoneNumbers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PaymentPage/constants/phoneNumbers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlatformPage/Platform.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlatformPage/Platform.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlatformPage/PlatformPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlatformPage/PlatformPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PrivacyPage/PrivacyPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PrivacyPage/PrivacyPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PrivacyPage/PrivacyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PrivacyPage/PrivacyPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RefundPage/RefundPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RefundPage/RefundPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RefundPage/RefundPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RefundPage/RefundPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WelcomePage/Welcome.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WelcomePage/Welcome.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/slices/adSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/adSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/CheckBox/CheckBox.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/CheckBox/CheckBox.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/CheckBox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/CheckBox/CheckBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/CustomSelect/CustomSelect.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/CustomSelect/CustomSelect.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/CustomSelect/CustomSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/CustomSelect/CustomSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ImagePicker/ImagePicker.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ImagePicker/ImagePicker.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ImagePicker/ImagePicker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ImagePicker/ImagePicker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input/Input.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input/Input.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/InputNew/InputNew.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/InputNew/InputNew.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/NestedSelect/NestedSelect.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/NestedSelect/NestedSelect.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/NestedSelect/NestedSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/NestedSelect/NestedSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2TxzinYvCqOnneFsH0J1prbJOlf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/hermanchuikov/Downloads/adbuy-mvp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "/Users/hermanchuikov/Downloads/adbuy-mvp/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/node_modules" />
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/ui" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

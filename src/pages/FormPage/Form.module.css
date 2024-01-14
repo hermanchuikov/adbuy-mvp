@@ -1,11 +1,72 @@
 .formPage {
-  padding-top: 75px;
-  background-color: #fcfcfc;
+  padding-top: 50px;
+  background-color: #f5f5ff;
 }
 
+
+
 .container {
-  width: 900px;
+  width: 1111px;
   margin: 0 auto;
+}
+
+.firstBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 30px;
+  padding-top: 10px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.secondBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 30px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.thirdBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 42px;
+  padding: 30px;
+  color: black;
+  background-color: #f5f5ff;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.gradientTitle {
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #dc8d25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 100%,
+    #fff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 42px;
+  overflow: visible;
+  text-align: center;
 }
 
 .formTitle {
@@ -17,11 +78,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  row-gap: 64px;
+  row-gap: 50px;
 }
 
 .formInner {
-  margin-top: 64px;
+  margin-top: 37px;
 }
 
 .selectBlock {
@@ -65,15 +126,56 @@
   margin-bottom: 12px;
 }
 
+.imageExtraText {
+  opacity: 0.63;
+  line-height: 18px;
+  font-size: 18px;
+  padding-top: 18px;
+  font-weight: 321;
+  color: black;
+}
+
 .loaderText {
   text-align: center;
   font-size: 22px;
   font-weight: 500;
 }
 
+.modalContainer {
+  padding: 16px;
+}
+
+.modalTitle {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modalText {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.button {
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
+}
+
+.button:hover {
+  scale: 1.03;
+}
+
 @media (max-width: 440px) {
   .formPage {
     padding-top: 36px;
+  }
+  .gradientTitle {
+    font-size: 26.2px;
   }
   .container {
     padding: 0 12px;
@@ -86,17 +188,28 @@
     row-gap: 36px;
   }
   .formInner {
-    margin-top: 36px;
+    margin-top: 12px;
   }
   .imageTitle {
     font-size: 16px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
   }
   .imageError {
     top: 4px;
     font-size: 12px;
   }
-  .imageInner {
-    margin-bottom: 18px;
+
+  .imageExtraText {
+    font-size: 14px;
+    padding-top: 10px;
+    margin-left: 3px;
   }
+
+
+
+  .secondBlock {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
 }

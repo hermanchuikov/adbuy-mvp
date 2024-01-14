@@ -3,27 +3,199 @@
 }
 
 .header {
-  background-image: url('../../assets/images/HeaderBackground.jpg');
+  background: linear-gradient(
+    68.2deg,
+    rgb(7, 3, 98) 43.21%,
+    rgb(21, 13, 107) 21.1%,
+    rgb(188, 16, 80) 130.5%
+  );
+  justify-content: center;
+  background-size: cover;
+}
+
+.rightCircle {
+  background-image: url('../../assets/images/rightCircle.png');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 70px;
+  height: 300px;
+  z-index: -1;
+}
+
+.leftCircle {
+  width: 50px;
+  height: 220px;
+  position: absolute;
+  left: 0px;
+  bottom: 30px;
+  transform: rotate(180deg);
+  background-image: url('../../assets/images/rightCircle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .nav {
-  height: 130px;
+  position: fixed;
+  width: 100%;
+  height: 77px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 150px;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 999;
+}
+
+.logoButton {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.navLogo {
+  width: 170px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  row-gap: 3px;
+  justify-content: space-between;
+}
+
+.hamburgerLine {
+  background-color: #3d4851;
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.closeFirstLine {
+  transform: rotate(45deg) translate(3px, 5px);
+  /* width: 23.4px; */
+}
+
+.closeSecondLine {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.closeThirdLine {
+  transform: rotate(-45deg) translate(3px, -5px);
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 67px;
+  height: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 64px 32px 64px 32px;
+  transition: height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.open {
+  pointer-events: all;
+  height: calc(100vh - 67px);
+  opacity: 1;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.mobileNavLink {
+  color: #262626;
+  list-style-type: none;
+  font-size: 24px;
+  border-bottom: 1px solid #a5b7c7;
+  padding-bottom: 18px;
+  padding-left: 8px;
+  font-weight: 600;
+}
+
+.mobileLoginBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 24px;
+}
+
+.linkBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.mainLink {
+  color: #262626;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.loginLinksBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.signInLink,
+.signUpLink {
+  text-decoration: none;
+  color: #262626;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 300ms ease-in;
+}
+
+.signInLink {
+}
+
+.signUpLink:hover {
+  scale: 1.1;
+}
+
+.signUpLink {
+  background-color: #ff3067;
+  border-radius: 20px;
+  padding: 16px 24px;
+  color: #fff;
 }
 
 .navButton {
-  background-color: #4a3aff;
+  margin-top: 0px;
+  background-image: linear-gradient(
+    135deg,
+    #dcab25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 94%
+  );
   color: #fff;
-  padding: 15px 45px;
+  width: 270px;
+  height: 60px;
   border-radius: 80px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   text-decoration: none;
   border: none;
@@ -32,6 +204,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
+}
+
+.icon-image {
+  display: inline-block; /* Display the icon inline with text */
+  vertical-align: middle; /* Align the icon vertically with text */
+  margin-left: 5px; /* Add some spacing between text and icon */
 }
 
 .container {
@@ -40,10 +221,10 @@
 }
 
 .headerBlock {
-  padding-top: 60px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 64px;
+  padding-bottom: 4px;
+  padding-top: 100px;
 }
 
 .headerImageBlock {
@@ -53,6 +234,13 @@
   align-items: center;
 }
 
+.headerImage {
+  width: 94%;
+  text-align: right;
+  /* margin-top: -55px; */
+  margin-left: 86px;
+}
+
 .headerChatImage {
   width: 290px;
   height: 85px;
@@ -60,22 +248,37 @@
 }
 
 .headerInfo {
-  width: 480px;
+  min-width: 480px;
+  padding-top: 77.77px;
 }
 
 .headerTitle {
-  font-size: 32px;
+  padding-top: 43px;
+
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .headerButton {
-  background-color: #4a3aff;
+  margin-top: -15px;
+  background-color: #ff3067;
+  /*background-image: linear-gradient(*/
+  /*  135deg,*/
+  /*  #dcab25,*/
+  /*  #ef7531 19%,*/
+  /*  #fc1414 35%,*/
+  /*  #e91547 48%,*/
+  /*  #7126ab 71%,*/
+  /*  #2156b5 94%,*/
+  /*  #fff*/
+  /*);*/
   color: #fff;
   width: 270px;
   height: 60px;
   border-radius: 80px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   text-decoration: none;
   border: none;
@@ -84,6 +287,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+  transition: all 300ms ease-in;
+}
+
+.headerButtonContainer {
+  display: flex; /* Use flexbox to make the link and image siblings */
+  align-items: center; /* Align items vertically in the center */
 }
 
 .headerButtonText {
@@ -93,12 +303,53 @@
   margin-left: 12px;
 }
 
-.info {
-  padding-top: 96px;
+.headerFooter {
+  margin-top: 30px;
+}
+
+.headerFooterText {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  padding-bottom: 21px;
+}
+
+.headerFooterTextRed {
+  color: #ee1d52ff;
+}
+
+.headerFooterTextBlue {
+  color: #7f00ff;
+}
+
+.infoStripe {
+  padding: 55px 0; /* Adjust the top and bottom padding as needed */
   display: flex;
   flex-direction: column;
-  row-gap: 120px;
-  margin-bottom: 36px;
+  justify-content: center;
+  background-color: #5433ff;
+  text-align: center;
+  background-image: url('../../assets/images/stripe_white.svg'); /* Replace with the actual path to your image */
+  background-size: 21%; /* Adjust the background size as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; /* Use the full width of the container */
+}
+
+.infoBlockStripe {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Use the full width of the container */
+}
+
+.info {
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  background-color: #f5f5ff;
+  padding-bottom: 55px;
 }
 
 .infoBlock {
@@ -107,6 +358,7 @@
   align-items: center;
   width: 1240px;
   margin: 0 auto;
+  background-color: #f5f5ff;
 }
 
 .infoBlock:nth-child(even) {
@@ -114,21 +366,35 @@
 }
 
 .infoBlockImage {
-  width: 45%;
+  width: 58%;
+}
+
+.infoBlockImageAI {
+  width: 55%;
 }
 
 .infoBlockInner {
   width: 45%;
 }
 
+.infoBlockInnerAI {
+  width: 36.9%;
+}
+
 .infoBlockTitle {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.infoBlockTitleAI {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 24px;
 }
 
 .infoBlockText {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 400;
   margin-bottom: 40px;
 }
@@ -139,7 +405,7 @@
   width: 240px;
   height: 55px;
   border-radius: 80px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 700;
   text-decoration: none;
   border: none;
@@ -148,25 +414,116 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
+
+  background-image: linear-gradient(
+    135deg,
+    #dcab25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 94%,
+    #fff
+  );
+  padding: 15px 45px;
+}
+
+.pricingImage {
+  background-color: #0a0a40;
+}
+
+.pricingCircle {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 100% 100%;
+  background-color: #fcfcfc;
+  margin: 0 auto;
+}
+
+.headerCircle {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 696px;
+  left: 0;
+  right: 0;
+  border-radius: 100% 100% 0 0;
+  background-color: #fcfcfc;
+  margin: 0 auto;
 }
 
 .pricing {
-  margin-top: 64px;
+  margin-top: 0px;
+  background: linear-gradient(
+    68.2deg,
+    rgb(7, 3, 98) 43.21%,
+    rgb(21, 13, 107) 21.1%,
+    rgb(188, 16, 80) 130.5%
+  );
 }
 
 .pricingTitle {
   text-align: center;
   font-size: 50px;
   font-weight: 700;
-  line-height: 62px;
+  margin-bottom: 8px;
+  color: white;
 }
 
 .pricingSubtitle {
-  font-size: 22px;
-  font-weight: 400;
   text-align: center;
-  margin-bottom: 48px;
-  color: #696590;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 11.11px;
+
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #dc8d25,
+    #ef7531 19%,
+    #fc1414 35%,
+    #e91547 48%,
+    #7126ab 71%,
+    #2156b5 100%,
+    #fff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+}
+
+.tariffBlock {
+  display: flex;
+  column-gap: 36px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.tariffButton {
+  padding: 16px 36px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tariffButton.active {
+  background-color: #ff3067;
+  color: #fff;
 }
 
 .pricingBlock {
@@ -175,7 +532,31 @@
   align-items: center;
 }
 
+.pricingCardBlock {
+  position: relative;
+}
+
+.pricingOld {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+}
+
+.pricingOldLine {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transform: rotate(-18deg);
+  width: 110%;
+  height: 1px;
+  background-color: #000;
+}
+
 .pricingAdditionalCard {
+  background-color: #fcfcfc;
   width: 394px;
   box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.2);
   margin-top: 50px;
@@ -185,14 +566,23 @@
 .pricingMainCard {
   width: 394px;
   box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.2);
-  background-color: #4a3aff;
-  color: #fff;
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #e91547,
+    #e91547 7%,
+    #e91547 21%,
+    #7126ab 71%,
+    #2156b5 100%,
+    #fff
+  );
+  color: #fcfcfc;
   border-radius: 24px;
   margin: 0 30px;
 }
 
 .pricingContainer {
-  padding: 50px 44px 52px 44px;
+  padding: 44px 44px 40px 44px;
 }
 
 .pricingCardHeader {
@@ -264,11 +654,51 @@
   background-color: #4a3aff;
 }
 
+.pricingCardPlatformImage {
+  width: 30px;
+  height: 30px;
+  margin-left: 7px;
+}
+
+.stripeImage {
+  width: 150px;
+  height: 50px;
+  margin-left: 30px;
+  margin-top: -7.65px;
+}
+
 .pricingCardItemText {
   font-weight: 400;
   font-size: 18px;
   color: #170f49;
   margin-left: 14px;
+}
+
+.pricingMainCardItemText {
+  font-weight: 411;
+  font-size: 18px;
+  color: #170f49;
+  margin-left: 14px;
+}
+
+.pricingMainCardButton {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 96px;
+  font-size: 23.4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
 }
 
 .pricingCardButton {
@@ -278,61 +708,133 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: #4a3aff;
+  background-color: #ff3067;
+
+  /*background-image: linear-gradient(*/
+  /*  135deg,*/
+  /*  #dcab25,*/
+  /*  #ef7531 19%,*/
+  /*  #fc1414 35%,*/
+  /*  #e91547 48%,*/
+  /*  #7126ab 71%,*/
+  /*  #2156b5 94%,*/
+  /*  #fff*/
+  /*);*/
   border: none;
   outline: none;
   border-radius: 96px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+
+  transition: all 300ms ease-in;
+}
+
+.infoBlockButton:hover {
+  scale: 1.1;
+}
+
+.navButton:hover {
+  scale: 1.1;
+}
+
+.headerButton:hover {
+  scale: 1.1;
+}
+
+.pricingMainCardButton:hover {
+  scale: 1.1;
+}
+
+.pricingCardButton:hover {
+  scale: 1.1;
+}
+
+.gradientTitle {
+  -webkit-text-stroke-color: #e91547;
+  -webkit-text-fill-color: transparent;
+  background-color: #ff3067;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 57px;
+  overflow: visible;
 }
 
 @media (max-width: 440px) {
   .nav {
     height: 67px;
-    padding: 16px 24px;
+    /* padding: 16px 24px; */
+    padding: 0 18px;
   }
   .navLogo {
-    width: 98px;
-    height: 35px;
+    width: 115px;
+    height: 52px;
+
+    /* margin-left: -16px; */
+    /* margin-top: 21px; */
   }
 
   .navButton {
     width: 120px;
-    height: 30px;
-    font-size: 14px;
+    height: 35px;
+    font-size: 17.8px;
+    font-weight: 700;
+    margin-top: 21px;
+  }
+  .signInLink {
+    text-align: center;
+    color: #262626;
+  }
+  .signUpLink {
+    padding: 16px 0;
+    text-align: center;
   }
   .container {
     width: 300px;
   }
 
   .headerBlock {
-    padding-top: 20px;
     flex-direction: column;
     align-items: center;
     padding-bottom: 24px;
     height: 100%;
+    padding-top: 67px;
   }
   .headerImage {
-    width: 196px;
+    width: 120%;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    margin-left: 0;
+  }
+
+  .headerChatImage {
+    width: 136px;
     height: 40px;
-    margin-top: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
+    margin-top: 36px;
   }
   .headerInfo {
     width: 100%;
   }
   .headerTitle {
-    font-size: 24px;
+    font-size: 26.5px;
     text-align: center;
     margin-bottom: 0;
+    margin-top: 5px;
   }
 
   .headerButton {
     width: 180px;
-    height: 30px;
-    font-size: 14px;
+    height: 50px;
+    font-size: 21px;
+    margin-top: 21px;
   }
 
   .headerButtonText {
@@ -344,6 +846,7 @@
   .info {
     padding-top: 36px;
     row-gap: 64px;
+    padding-bottom: 35px;
   }
 
   .infoBlock {
@@ -351,43 +854,54 @@
   }
 
   .infoBlock:nth-child(even) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .infoBlock:nth-child(odd) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .infoBlockInner {
-    width: 100%;
+    width: 125%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
+  .infoBlockInnerAI {
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .infoBlockTitle {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    margin-top: 7px;
   }
   .infoBlockText {
-    font-size: 18px;
+    font-size: 19px;
     text-align: center;
     margin-bottom: 12px;
   }
   .infoBlockButton {
-    width: 150px;
-    height: 30px;
-    font-size: 14px;
+    width: 170px;
+    height: 55px;
+    font-size: 22px;
     margin: 0 auto;
+    margin-top: 7px;
   }
   .infoBlockImage {
-    width: 300px;
-    margin-top: 24px;
+    margin-bottom: 14px;
+    width: 370px;
   }
 
   .pricingBlock {
     flex-direction: column;
     row-gap: 32px;
+    margin-top: 18px;
   }
 
   .pricingAdditionalCard {
@@ -402,13 +916,65 @@
   .pricingContainer {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 28px;
   }
 
   .pricingTitle {
-    font-size: 24px;
+    font-size: 27px;
+    margin-bottom: 5.7px;
   }
-  
+
   .pricingSubtitle {
-    font-size: 18px;
+    font-size: 19px;
+    margin-bottom: 26px;
+  }
+
+  .headerFooter {
+    margin-top: 24px;
+  }
+
+  .headerFooterText {
+    font-size: 19px;
+    padding-bottom: 16px;
+  }
+
+  .headerFooterTextRed {
+    display: block;
+  }
+
+  .infoBlockImageAI {
+    margin-bottom: 8px;
+    width: 370px;
+  }
+
+  .gradientTitle {
+    -webkit-text-stroke-color: #e91547;
+    -webkit-text-fill-color: transparent;
+    background-color: transparent;
+    background-image: linear-gradient(
+      135deg,
+      #dc8d25,
+      #ef7531 19%,
+      #fc1414 35%,
+      #e91547 48%,
+      #7126ab 71%,
+      #2156b5 100%,
+      #fff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 0;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 0px;
+    overflow: visible;
+  }
+
+  .stripeImage {
+    width: 173px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: 33px;
+    margin-bottom: -23px;
   }
 }

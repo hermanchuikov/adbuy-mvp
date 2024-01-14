@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Adbuy",
+  "name": "Adbuy is an AI tool that allows small businesses to generate sales-focused ad creatives and launch them across social media and search in seconds.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "adbuy.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

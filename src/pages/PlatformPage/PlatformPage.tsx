@@ -8,16 +8,17 @@ import { useMediaQuery } from 'react-responsive';
 import { setCountriesandLanguages } from '../../store/slices/adSlice';
 import { setPlatforms } from '../../store/slices/adSlice';
 import classes from './Platform.module.css';
-import googleImage from '../../assets/images/platform-1.svg';
-import facebookImage from '../../assets/images/platform-2.svg';
-import instagramImage from '../../assets/images/platform-3.svg';
-import tiktokImage from '../../assets/images/platform-4.svg';
+import googleImage from '../../assets/images/platform-1.png';
+import facebookImage from '../../assets/images/platform-2.png';
+import instagramImage from '../../assets/images/platform-3.png';
+import tiktokImage from '../../assets/images/platform-4.png';
 import { useFetch } from '../../hooks/useFetch';
+import { useAppSelector } from '../../hooks/useAppSelector';
 
 const platformList = [
   { name: 'google', image: googleImage, isActive: false },
-  { name: 'facebook', image: facebookImage, isActive: false },
   { name: 'instagram', image: instagramImage, isActive: false },
+  { name: 'facebook', image: facebookImage, isActive: false },
   { name: 'tiktok', image: tiktokImage, isActive: false },
 ];
 
@@ -33,6 +34,7 @@ const PlatformPage: FC = () => {
     control,
     handleSubmit,
     setError,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -57,12 +59,15 @@ const PlatformPage: FC = () => {
   }, []);
 
   const handleSubmitButton = async (data: object) => {
+    console.log(`Data: ${data}`);
     let chosenPlatforms = [];
     for (let platform of Object.entries(data)) {
       if (platform[1] === true) {
         chosenPlatforms.push(platform[0]);
       }
     }
+
+    console.log('Chosen platforms: ' + chosenPlatforms);
 
     // console.log(chosenPlatforms);
     dispatch(setPlatforms(chosenPlatforms));
@@ -73,11 +78,15 @@ const PlatformPage: FC = () => {
     setLoading(true);
     await $api
       .post('language_location', platformObject)
-      .then((data) => {
+      .then((data: any) => {
+        console.log(data.data);
         dispatch(setCountriesandLanguages(data.data));
       })
-      .then(() => navigate('/form'))
-      .catch((e) => setResponseError(e.message))
+      .then(() => navigate('/form?mode=custom'))
+      .catch((e: any) => {
+        console.log(e);
+        setResponseError(e.errorMessage);
+      })
       .finally(() => {
         setLoading(false);
       });
@@ -88,7 +97,8 @@ const PlatformPage: FC = () => {
       {loading && <Loader />}
       <div className={classes.platform}>
         <div className={classes.container}>
-          <h2 className={classes.title}>Select platforms</h2>
+          <h2 className={classes.gradientTitle}>Select Platforms · Step 1/3</h2>
+
           <div className={classes.platformInner}>
             <form onSubmit={handleSubmit(handleSubmitButton)}>
               <div className={classes.platformBlock}>
@@ -98,7 +108,7 @@ const PlatformPage: FC = () => {
                       control={control}
                       name={platform.name}
                       key={platform.name}
-                      isChecked={platform.isActive}
+                      // isChecked={platform.isActive}
                     >
                       <img
                         src={platform.image}
@@ -111,20 +121,26 @@ const PlatformPage: FC = () => {
               </div>
 
               <Button
-                title="Next page"
+                title="Continue"
                 style={
                   isMobile
                     ? {
-                        height: '30px',
-                        'font-size': '14px',
+                        height: '40px',
+                        'font-size': '18.2px',
                         'background-color': '#33d684',
-                        'padding': 0,
+                        padding: 0,
+                        'box-shadow': '0px 8px 15px rgba(0, 0, 0, 0.16)',
+
+                        transition: 'all 300ms ease-in',
                       }
                     : {
                         height: '80px',
                         'background-color': '#33d684',
-                        'font-size': '24px',
-                        'padding': 0,
+                        'font-size': '25.2px',
+                        padding: 0,
+                        'box-shadow': '0px 8px 15px rgba(0, 0, 0, 0.16)',
+
+                        transition: 'all 300ms ease-in',
                       }
                 }
               />
