@@ -2,8 +2,7 @@
   min-height: 100vh;
   background: linear-gradient(
           68.2deg,
-          rgb(7, 3, 98) 43.21%,
-          rgb(21, 13, 107) 21.1%,
+          /*rgb(7, 3, 98) 43.21%,*/ rgb(54, 36, 234) 18%,
           rgb(188, 16, 80) 130.5%
   );}
 
@@ -37,7 +36,7 @@
   /* margin: 24px 120px 0 120px; */
   width: 550px;
   margin-top: 36px;
-  border: 1.5px solid #ff3067;
+  border: 3px solid white;
   border-radius: 42px;
   padding: 16px 24px 24px 24px;
   background-color: #f5f5ff;
@@ -127,6 +126,7 @@
   margin-top: 30px;
   cursor: pointer;
   width: 550px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .authRedirectText {
