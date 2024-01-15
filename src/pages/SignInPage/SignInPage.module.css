@@ -1,7 +1,11 @@
 .wrapper {
   min-height: 100vh;
-  background-color: rgb(237, 216, 216);
-}
+  background: linear-gradient(
+          68.2deg,
+          rgb(7, 3, 98) 43.21%,
+          rgb(21, 13, 107) 21.1%,
+          rgb(188, 16, 80) 130.5%
+  );}
 
 .container {
   display: flex;
@@ -12,7 +16,8 @@
 }
 
 .logo {
-  width: 400px;
+  padding-top: 30px;
+  width: 200px;
 }
 
 .logoButton {
@@ -30,11 +35,11 @@
 .authBlock {
   text-align: center;
   /* margin: 24px 120px 0 120px; */
-  width: 1100px;
+  width: 550px;
   margin-top: 36px;
-  border: 1px solid #d9d9d9;
+  border: 1.5px solid #ff3067;
   border-radius: 42px;
-  padding: 16px 24px 32px 24px;
+  padding: 16px 24px 24px 24px;
   background-color: #f5f5ff;
   box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
     0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
@@ -49,17 +54,17 @@
 
 .authSubtitle {
   color: #262626;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 7px;
 }
 
 .dividerLine {
   position: relative;
-  width: 50%;
+  width: 30%;
   height: 1px;
-  background-color: #262626;
+  background-color: #857f7f;
   margin: 24px auto;
 }
 
@@ -72,6 +77,7 @@
   padding: 0 16px;
   font-size: 18px;
   font-weight: 400;
+  color: #857f7f;
 }
 
 .googleButton {
@@ -96,14 +102,15 @@
 .form {
   display: flex;
   flex-direction: column;
-  row-gap: 36px;
-  margin: 18px 0;
+  row-gap: 24px;
+  margin: 20px 0;
+
 }
 
 .authForgotPassword {
   margin-top: 24px;
   cursor: pointer;
-  color: #ff3067;
+  color: #857f7f;
 }
 
 .submitButton {
@@ -117,14 +124,16 @@
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  margin-top: 48px;
+  margin-top: 30px;
   cursor: pointer;
-  width: 1100px;
+  width: 550px;
 }
 
 .authRedirectText {
-  margin-top: 12px;
+  color: white;
+  margin-top: 20px;
   font-size: 18px;
+  margin-bottom: 42px;
 }
 
 .authRedirectLink {
