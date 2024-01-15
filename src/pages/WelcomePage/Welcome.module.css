@@ -58,7 +58,7 @@
 }
 
 .navLogo {
-  width: 170px;
+  width: 150px;
 }
 
 .hamburger {
@@ -223,7 +223,7 @@
 .headerBlock {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 4px;
+  padding-bottom: 30px;
   padding-top: 100px;
 }
 
@@ -235,10 +235,10 @@
 }
 
 .headerImage {
-  width: 94%;
+  width: 100%;
   text-align: right;
-  /* margin-top: -55px; */
-  margin-left: 86px;
+  margin-top: 7px;
+  margin-left: 92px;
 }
 
 .headerChatImage {
@@ -303,9 +303,6 @@
   margin-left: 12px;
 }
 
-.headerFooter {
-  margin-top: 30px;
-}
 
 .headerFooterText {
   text-align: center;
@@ -503,7 +500,7 @@
 
 .tariffBlock {
   display: flex;
-  column-gap: 36px;
+  column-gap: 30px;
   justify-content: center;
   margin-top: 18px;
 }
@@ -566,17 +563,7 @@
 .pricingMainCard {
   width: 394px;
   box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.2);
-  background-color: transparent;
-  background-image: linear-gradient(
-    135deg,
-    #e91547,
-    #e91547 7%,
-    #e91547 21%,
-    #7126ab 71%,
-    #2156b5 100%,
-    #fff
-  );
-  color: #fcfcfc;
+  background-color: #fcfcfc;
   border-radius: 24px;
   margin: 0 30px;
 }
@@ -688,10 +675,11 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  background-color: #ff3067;
   border: none;
   outline: none;
   border-radius: 96px;
-  font-size: 23.4px;
+  font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -709,21 +697,10 @@
   align-items: center;
   color: #fff;
   background-color: #ff3067;
-
-  /*background-image: linear-gradient(*/
-  /*  135deg,*/
-  /*  #dcab25,*/
-  /*  #ef7531 19%,*/
-  /*  #fc1414 35%,*/
-  /*  #e91547 48%,*/
-  /*  #7126ab 71%,*/
-  /*  #2156b5 94%,*/
-  /*  #fff*/
-  /*);*/
   border: none;
   outline: none;
   border-radius: 96px;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;

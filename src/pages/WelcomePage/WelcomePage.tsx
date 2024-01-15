@@ -20,14 +20,14 @@ import { Footer } from '../../components';
 
 const TARIFF_PLANS = {
   month: {
-    low: { price: 8.00, discountPrice: null },
-    medium: { price: 14, discountPrice: null },
-    high: { price: 21, discountPrice: null },
+    low: { price: 8, discountPrice: 10 },
+    medium: { price: 14, discountPrice: 17 },
+    high: { price: 21, discountPrice: 25 },
   },
   year: {
     low: { price: 48, discountPrice: 96 },
     medium: { price: 84, discountPrice: 168 },
-    high: { price: 252, discountPrice: 126 },
+    high: { price: 126, discountPrice: 252 },
   },
 };
 
@@ -195,7 +195,9 @@ const WelcomePage: FC = () => {
                       Boost Your Sales
                     </span>{' '}
                     with AI
-                    <span className={classes.gradientTitle}> in seconds!</span>
+                    {' '}<span className={classes.gradientTitle}>
+                      in seconds!
+                    </span>
                   </h2>
 
                   <div className={classes.headerButtonContainer}>
@@ -215,12 +217,12 @@ const WelcomePage: FC = () => {
             )}
           </div>
           <div className={classes.headerFooter}>
-            <p className={classes.headerFooterText}>
-              <span className={classes.headerFooterTextRed}>
-                7-day Free Trial
-              </span>{' '}
-              <span className={classes.headerFooterTextBlue}>in seconds!</span>
-            </p>
+            {/*<p className={classes.headerFooterText}>*/}
+            {/*  <span className={classes.headerFooterTextRed}>*/}
+            {/*    7-day Free Trial*/}
+            {/*  </span>{' '}*/}
+            {/*  <span className={classes.headerFooterTextBlue}>in seconds!</span>*/}
+            {/*</p>*/}
           </div>
         </div>
       </header>
@@ -274,7 +276,7 @@ const WelcomePage: FC = () => {
                   tariff === 'month' ? classes.active : null
                 }`}
               >
-                Month
+                Monthly
               </button>
               <button
                 onClick={() => setTariff('year')}
@@ -282,7 +284,7 @@ const WelcomePage: FC = () => {
                   tariff === 'year' ? classes.active : null
                 }`}
               >
-                Year
+                Yearly
               </button>
             </div>
             <div className={classes.pricingBlock}>
@@ -325,7 +327,7 @@ const WelcomePage: FC = () => {
                           className={classes.pricingCardItemImage}
                         ></img>
 
-                        <p className={classes.pricingCardItemText}>Launch on</p>
+                        <p className={classes.pricingCardItemText}>Instant Launch</p>
 
                         <img
                           src={googleImage}
@@ -390,7 +392,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    7-day Free Trial
+                    Get 7-day Free Trial
                   </Link>
                 </div>
               </div>
@@ -404,13 +406,11 @@ const WelcomePage: FC = () => {
                     <div className={classes.pricingCardHeaderBlock}>
                       <h6
                         className={classes.pricingHeaderSuptitle}
-                        style={{ color: '#fff' }}
                       >
                         Budget
                       </h6>
                       <p
                         className={classes.pricingCardHeaderTitle}
-                        style={{ color: '#fff' }}
                       >
                         $500 - $1,499
                       </p>
@@ -419,23 +419,19 @@ const WelcomePage: FC = () => {
                   <div className={classes.pricingCardBlock}>
                     {tariff === 'year' && (
                       <p
-                        style={{ color: '#fff' }}
                         className={classes.pricingOld}
                       >
                         ${TARIFF_PLANS[tariff].medium.discountPrice}
                         <span
-                          style={{ color: '#fff' }}
                           className={classes.pricingOldLine}
                         ></span>
                       </p>
                     )}
                     <p
-                      style={{ color: '#fff' }}
                       className={classes.pricingCardPrice}
                     >
                       ${TARIFF_PLANS[tariff].medium.price}{' '}
                       <span
-                        style={{ color: '#fff' }}
                         className={classes.pricingCardAdditionalText}
                       >
                         for service
@@ -445,19 +441,17 @@ const WelcomePage: FC = () => {
                   <div className={classes.pricingCardListBlock}>
                     <h6
                       className={classes.pricingCardListHeaderTitle}
-                      style={{ color: '#fff' }}
                     >
                       What’s included
                     </h6>
                     <div className={classes.pricingCardList}>
                       <div className={classes.pricingCardListItem}>
                         <img
-                          src={whiteCircle}
+                          src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
                         <p
                           className={classes.pricingMainCardItemText}
-                          style={{ color: '#fff' }}
                         >
                           Launch on
                         </p>
@@ -485,12 +479,11 @@ const WelcomePage: FC = () => {
 
                       <div className={classes.pricingCardListItem}>
                         <img
-                          src={whiteCircle}
+                          src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
                         <p
                           className={classes.pricingMainCardItemText}
-                          style={{ color: '#fff' }}
                         >
                           Ad Accounts Creation
                         </p>
@@ -498,12 +491,11 @@ const WelcomePage: FC = () => {
 
                       <div className={classes.pricingCardListItem}>
                         <img
-                          src={whiteCircle}
+                          src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
                         <p
                           className={classes.pricingMainCardItemText}
-                          style={{ color: '#fff' }}
                         >
                           Unlimited Ad Generation with GPT-4 and DALL·E 3
                         </p>
@@ -511,12 +503,11 @@ const WelcomePage: FC = () => {
 
                       <div className={classes.pricingCardListItem}>
                         <img
-                          src={whiteCircle}
+                          src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
                         <p
                           className={classes.pricingMainCardItemText}
-                          style={{ color: '#fff' }}
                         >
                           AI Campaign Optimization
                         </p>
@@ -524,12 +515,11 @@ const WelcomePage: FC = () => {
 
                       <div className={classes.pricingCardListItem}>
                         <img
-                          src={whiteCircle}
+                          src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
                         <p
                           className={classes.pricingMainCardItemText}
-                          style={{ color: '#fff' }}
                         >
                           Campaign Reporting
                         </p>
@@ -539,13 +529,8 @@ const WelcomePage: FC = () => {
                   <Link
                     to={'platforms'}
                     className={classes.pricingMainCardButton}
-                    style={{
-                      backgroundColor: '#fff',
-                      color: '#4A3AFF',
-                      fontWeight: 700,
-                    }}
                   >
-                    Get started 🚀
+                    Get Free Trial
                   </Link>
                 </div>
               </div>
@@ -653,7 +638,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    Get started
+                    Get 7-day Free Trial
                   </Link>
                 </div>
               </div>
