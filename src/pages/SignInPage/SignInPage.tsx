@@ -14,32 +14,32 @@ const SignInPage: FC = () => {
             <img src={AdbuyLogo} className={classes.logo} />
           </Link>
           <div className={classes.authBlock}>
-            <h2 className={classes.authTitle}>Sign in</h2>
-            <h4 className={classes.authSubtitle}>Boost your sales</h4>
+            <h2 className={classes.authTitle}>Login</h2>
+            {/*<h4 className={classes.authSubtitle}>Boost your sales</h4>*/}
 
             <button className={classes.googleButton}>
-              Sign in with Google
+              Login with Google
               <img className={classes.googleButtonLogo} src={GoogleLogo} />
             </button>
 
             <div className={classes.dividerLine}>
-              <p className={classes.dividerText}>or</p>
+              <p className={classes.dividerText}><b>OR</b></p>
             </div>
 
             <form className={classes.form}>
-              <Input inputStyles={{ width: '100%' }} title="Email" />
-              <Input inputStyles={{ width: '100%' }} title="Password" />
+              <Input inputStyles={{ width: '100%'}} placeholder={"Email"}/>
+              <Input inputStyles={{ width: '100%' }} placeholder={"Password"}/>
             </form>
 
-            <a className={classes.authForgotPassword}>Forgot password?</a>
+            <a className={classes.authForgotPassword}><b>Forgot password?</b></a>
           </div>
           <button className={classes.submitButton} type="submit">
-            Sign in
+            Login
           </button>
           <p className={classes.authRedirectText}>
-            Don`t have an account?{' '}
+            <b>Don't have an account?</b>{' '}
             <Link className={classes.authRedirectLink} to="/signUp">
-              Sign up
+              <b>Sign up</b>
             </Link>
           </p>
         </div>
