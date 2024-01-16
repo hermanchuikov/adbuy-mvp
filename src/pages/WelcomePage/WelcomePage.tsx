@@ -135,7 +135,7 @@ const WelcomePage: FC = () => {
                 </ul>
                 <div className={classes.mobileLoginBlock}>
                   <Link className={classes.signInLink} to={'/signIn'}>
-                    Sign in
+                    Log in
                   </Link>
                   <Link className={classes.signUpLink} to={'/signUp'}>
                     Sign up
@@ -160,7 +160,7 @@ const WelcomePage: FC = () => {
               </div>
               <div className={classes.loginLinksBlock}>
                 <Link className={classes.signInLink} to={'/signIn'}>
-                  Sign in
+                  Log in
                 </Link>
                 <Link className={classes.signUpLink} to={'/signUp'}>
                   Sign up
@@ -396,7 +396,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    Get 7-day Free Trial
+                    Get Free Trial
                   </Link>
                 </div>
               </div>
@@ -642,7 +642,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    Get 7-day Free Trial
+                    Get Free Trial
                   </Link>
                 </div>
               </div>

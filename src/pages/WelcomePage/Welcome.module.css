@@ -394,7 +394,7 @@
 }
 
 .infoBlockButton {
-  background-color: #4a3aff;
+  background-color: #ff3067;
   color: #fff;
   width: 240px;
   height: 55px;
@@ -409,19 +409,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
-
   transition: all 300ms ease-in;
-
-  background-image: linear-gradient(
-    135deg,
-    #dcab25,
-    #ef7531 19%,
-    #fc1414 35%,
-    #e91547 48%,
-    #7126ab 71%,
-    #2156b5 94%,
-    #fff
-  );
   padding: 15px 45px;
 }
 
@@ -512,6 +500,7 @@
   border-radius: 80px;
   cursor: pointer;
   transition: all 0.5s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .tariffButton.active {
@@ -531,11 +520,12 @@
 
 .pricingOld {
   position: absolute;
-  top: -14px;
+  top: -18px;
   left: 0;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 16px;
   color: #000;
+  font-weight: 500;
 }
 
 .pricingOldLine {
