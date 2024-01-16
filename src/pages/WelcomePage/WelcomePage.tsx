@@ -134,8 +134,9 @@ const WelcomePage: FC = () => {
                   </li>
                 </ul>
                 <div className={classes.mobileLoginBlock}>
+             
                   <Link className={classes.signInLink} to={'/login'}>
-                    Log in
+                    Login
                   </Link>
                   <Link className={classes.signUpLink} to={'/signUp'}>
                     Sign up
@@ -159,8 +160,9 @@ const WelcomePage: FC = () => {
                 </a>
               </div>
               <div className={classes.loginLinksBlock}>
+             
                 <Link className={classes.signInLink} to={'/login'}>
-                  Log in
+                  Login
                 </Link>
                 <Link className={classes.signUpLink} to={'/signUp'}>
                   Sign up
