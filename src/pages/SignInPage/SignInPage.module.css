@@ -1,10 +1,11 @@
 .wrapper {
   min-height: 100vh;
   background: linear-gradient(
-          68.2deg,
-          /*rgb(7, 3, 98) 43.21%,*/ rgb(54, 36, 234) 18%,
+          75deg,
+          rgb(54, 36, 234) 18%,
           rgb(188, 16, 80) 130.5%
   );}
+
 
 .container {
   display: flex;
