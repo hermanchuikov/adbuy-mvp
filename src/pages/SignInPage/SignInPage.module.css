@@ -1,12 +1,11 @@
 .wrapper {
   min-height: 100vh;
   background: linear-gradient(
-          77deg,
-          rgb(21, 13, 107) 21%,
-          rgb(255, 48, 103) 100%
+    77deg,
+    rgb(21, 13, 107) 21%,
+    rgb(255, 48, 103) 100%
   );
 }
-
 
 .container {
   display: flex;
@@ -44,7 +43,6 @@
   background-color: #f5f5ff;
   box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
     0 27px 42px -10px rgba(50, 50, 93, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.3);
-
 }
 
 .authTitle {
@@ -52,6 +50,7 @@
   font-size: 36px;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 36px;
 }
 
 .authSubtitle {
@@ -106,7 +105,19 @@
   flex-direction: column;
   row-gap: 24px;
   margin: 20px 0;
+}
 
+.inputEyeButton {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.inputEye {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 40px;
 }
 
 .authForgotPassword {
@@ -169,6 +180,11 @@
   }
   .form {
     row-gap: 16px;
+  }
+  .inputEye {
+    top: 34px;
+    right: 12px;
+    width: 20px;
   }
   .submitButton {
     padding: 0;
