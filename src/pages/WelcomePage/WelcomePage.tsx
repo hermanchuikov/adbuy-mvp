@@ -396,7 +396,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    Get 7-day Free Trial
+                    Get Free Trial
                   </Link>
                 </div>
               </div>
@@ -642,7 +642,7 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <Link to={'platforms'} className={classes.pricingCardButton}>
-                    Get 7-day Free Trial
+                    Get Free Trial
                   </Link>
                 </div>
               </div>
