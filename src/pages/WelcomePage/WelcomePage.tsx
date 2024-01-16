@@ -192,10 +192,14 @@ const WelcomePage: FC = () => {
                 <div className={classes.headerInfo}>
                   <h2 className={classes.headerTitle}>
                     <span className={classes.gradientTitle}>
-                      Boost Your Sales
+                      Boost </span>{' 🚀'}
+                      <br></br>
+                    <span className={classes.gradientTitle}>
+                      Your Sales
                     </span>{' '}
                     with AI
-                    {' '}<span className={classes.gradientTitle}>
+                    <br></br>
+                    <span className={classes.gradientTitle} >
                       in seconds!
                     </span>
                   </h2>
