@@ -53,6 +53,7 @@
   font-weight: 600;
   text-align: center;
   margin-top: 12px;
+  margin-bottom: 48px;
 }
 
 .dividerLine {
@@ -98,6 +99,19 @@
   flex-direction: column;
   row-gap: 36px;
   margin: 18px 0;
+}
+
+.inputEyeButton {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.inputEye {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 40px;
 }
 
 .authForgotPassword {
@@ -149,6 +163,7 @@
   .authSubtitle {
     font-size: 18px;
     margin-top: 0;
+    margin-bottom: 24px;
   }
   .authBlock {
     width: 100%;
@@ -157,6 +172,11 @@
   }
   .form {
     row-gap: 16px;
+  }
+  .inputEye {
+    top: 34px;
+    right: 12px;
+    width: 20px;
   }
   .submitButton {
     padding: 0;

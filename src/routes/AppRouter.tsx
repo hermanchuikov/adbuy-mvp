@@ -31,7 +31,7 @@ const AppRouter: FC = () => {
         <Route path="privacy" element={<PrivacyPage />} />
         <Route path="refund" element={<RefundPage />} />
       </Route>
-      <Route path="signIn" element={<SignInPage />} />
+      <Route path="login" element={<SignInPage />} />
       <Route path="signUp" element={<SignUpPage />} />
     </Routes>
   );

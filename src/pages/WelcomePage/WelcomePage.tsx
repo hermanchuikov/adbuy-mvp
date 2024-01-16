@@ -134,7 +134,7 @@ const WelcomePage: FC = () => {
                   </li>
                 </ul>
                 <div className={classes.mobileLoginBlock}>
-                  <Link className={classes.signInLink} to={'/signIn'}>
+                  <Link className={classes.signInLink} to={'/login'}>
                     Log in
                   </Link>
                   <Link className={classes.signUpLink} to={'/signUp'}>
@@ -159,7 +159,7 @@ const WelcomePage: FC = () => {
                 </a>
               </div>
               <div className={classes.loginLinksBlock}>
-                <Link className={classes.signInLink} to={'/signIn'}>
+                <Link className={classes.signInLink} to={'/login'}>
                   Log in
                 </Link>
                 <Link className={classes.signUpLink} to={'/signUp'}>
@@ -191,17 +191,15 @@ const WelcomePage: FC = () => {
               <>
                 <div className={classes.headerInfo}>
                   <h2 className={classes.headerTitle}>
-                    <span className={classes.gradientTitle}>
-                      Boost </span>{' 🚀'}
-                      <br></br>
+                    <span className={classes.gradientTitle}>Boost </span>
+                    {' 🚀'}
+                    <br></br>
                     <span className={classes.gradientTitle}>
                       Your Sales
                     </span>{' '}
                     with AI
                     <br></br>
-                    <span className={classes.gradientTitle} >
-                      in seconds!
-                    </span>
+                    <span className={classes.gradientTitle}>in seconds!</span>
                   </h2>
 
                   <div className={classes.headerButtonContainer}>
@@ -307,16 +305,16 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <div className={classes.pricingCardBlock}>
-                    {tariff === 'year' && (
+                    {
                       <p className={classes.pricingOld}>
                         ${TARIFF_PLANS[tariff].low.discountPrice}
                         <span className={classes.pricingOldLine}></span>
                       </p>
-                    )}
+                    }
                     <p className={classes.pricingCardPrice}>
                       ${TARIFF_PLANS[tariff].low.price}{' '}
                       <span className={classes.pricingCardAdditionalText}>
-                        for service
+                        {tariff === 'month' ? '/ month' : '/ year'}
                       </span>
                     </p>
                   </div>
@@ -331,7 +329,9 @@ const WelcomePage: FC = () => {
                           className={classes.pricingCardItemImage}
                         ></img>
 
-                        <p className={classes.pricingCardItemText}>Instant Launch</p>
+                        <p className={classes.pricingCardItemText}>
+                          Instant Launch
+                        </p>
 
                         <img
                           src={googleImage}
@@ -408,44 +408,28 @@ const WelcomePage: FC = () => {
                       className={classes.pricingCardHeaderImage}
                     ></img>
                     <div className={classes.pricingCardHeaderBlock}>
-                      <h6
-                        className={classes.pricingHeaderSuptitle}
-                      >
-                        Budget
-                      </h6>
-                      <p
-                        className={classes.pricingCardHeaderTitle}
-                      >
+                      <h6 className={classes.pricingHeaderSuptitle}>Budget</h6>
+                      <p className={classes.pricingCardHeaderTitle}>
                         $500 - $1,499
                       </p>
                     </div>
                   </div>
                   <div className={classes.pricingCardBlock}>
-                    {tariff === 'year' && (
-                      <p
-                        className={classes.pricingOld}
-                      >
+                    {
+                      <p className={classes.pricingOld}>
                         ${TARIFF_PLANS[tariff].medium.discountPrice}
-                        <span
-                          className={classes.pricingOldLine}
-                        ></span>
+                        <span className={classes.pricingOldLine}></span>
                       </p>
-                    )}
-                    <p
-                      className={classes.pricingCardPrice}
-                    >
+                    }
+                    <p className={classes.pricingCardPrice}>
                       ${TARIFF_PLANS[tariff].medium.price}{' '}
-                      <span
-                        className={classes.pricingCardAdditionalText}
-                      >
-                        for service
+                      <span className={classes.pricingCardAdditionalText}>
+                        {tariff === 'month' ? '/ month' : '/ year'}
                       </span>
                     </p>
                   </div>
                   <div className={classes.pricingCardListBlock}>
-                    <h6
-                      className={classes.pricingCardListHeaderTitle}
-                    >
+                    <h6 className={classes.pricingCardListHeaderTitle}>
                       What’s included
                     </h6>
                     <div className={classes.pricingCardList}>
@@ -454,9 +438,7 @@ const WelcomePage: FC = () => {
                           src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
-                        <p
-                          className={classes.pricingMainCardItemText}
-                        >
+                        <p className={classes.pricingMainCardItemText}>
                           Launch on
                         </p>
 
@@ -486,9 +468,7 @@ const WelcomePage: FC = () => {
                           src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
-                        <p
-                          className={classes.pricingMainCardItemText}
-                        >
+                        <p className={classes.pricingMainCardItemText}>
                           Ad Accounts Creation
                         </p>
                       </div>
@@ -498,9 +478,7 @@ const WelcomePage: FC = () => {
                           src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
-                        <p
-                          className={classes.pricingMainCardItemText}
-                        >
+                        <p className={classes.pricingMainCardItemText}>
                           Unlimited Ad Generation with GPT-4 and DALL·E 3
                         </p>
                       </div>
@@ -510,9 +488,7 @@ const WelcomePage: FC = () => {
                           src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
-                        <p
-                          className={classes.pricingMainCardItemText}
-                        >
+                        <p className={classes.pricingMainCardItemText}>
                           AI Campaign Optimization
                         </p>
                       </div>
@@ -522,9 +498,7 @@ const WelcomePage: FC = () => {
                           src={blueCircle}
                           className={classes.pricingCardItemImage}
                         ></img>
-                        <p
-                          className={classes.pricingMainCardItemText}
-                        >
+                        <p className={classes.pricingMainCardItemText}>
                           Campaign Reporting
                         </p>
                       </div>
@@ -553,16 +527,16 @@ const WelcomePage: FC = () => {
                     </div>
                   </div>
                   <div className={classes.pricingCardBlock}>
-                    {tariff === 'year' && (
+                    {
                       <p className={classes.pricingOld}>
                         ${TARIFF_PLANS[tariff].high.discountPrice}
                         <span className={classes.pricingOldLine}></span>
                       </p>
-                    )}
+                    }
                     <p className={classes.pricingCardPrice}>
                       ${TARIFF_PLANS[tariff].high.price}{' '}
                       <span className={classes.pricingCardAdditionalText}>
-                        for service
+                        {tariff === 'month' ? '/ month' : '/ year'}
                       </span>
                     </p>
                   </div>

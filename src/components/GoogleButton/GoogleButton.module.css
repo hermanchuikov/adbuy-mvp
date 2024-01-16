@@ -1,0 +1,26 @@
+.button {
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  max-width: 300px;
+  width: 300px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+  column-gap: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.image {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #181818;
+}
