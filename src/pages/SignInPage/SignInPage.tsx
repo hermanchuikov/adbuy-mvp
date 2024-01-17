@@ -42,6 +42,7 @@ const SignInPage: FC = () => {
               <Input
                 inputStyles={{ width: '100%' }}
                 title="Password"
+                placeholder={"Password"}
                 type={isHiddenPassword ? 'password' : 'text'}
               >
                 <button
