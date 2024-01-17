@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8e699854-9039-405e-8418-55f21e12f13f" name="Changes" comment="Login page update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignInPage/SignInPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignInPage/SignInPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignInPage/SignInPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignInPage/SignInPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WelcomePage/Welcome.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WelcomePage/Welcome.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
